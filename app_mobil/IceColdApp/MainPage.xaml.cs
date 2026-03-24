@@ -39,6 +39,7 @@ public partial class MainPage : ContentPage
 
     private async void OnPerfilClicked(object sender, EventArgs e)
     {
-        await DisplayAlert("Perfil", "Mostrando información del perfil", "OK");
+        
+        await Shell.Current.GoToAsync(nameof(LoginPage));
     }
 }

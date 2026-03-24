@@ -1,10 +1,12 @@
-﻿namespace IceColdApp
+﻿namespace IceColdApp;
+
+public partial class AppShell : Shell
 {
-    public partial class AppShell : Shell
+    public AppShell()
     {
-        public AppShell()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+
+        // Registra la ruta hacia la página de Login
+        Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
     }
 }
