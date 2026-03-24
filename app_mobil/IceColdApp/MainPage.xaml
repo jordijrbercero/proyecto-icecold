@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IceColdApp.MainPage"
+             BackgroundColor="#0A0F1D"
+             Shell.NavBarIsVisible="False">
+
+    <ContentPage.Resources>
+        <Style x:Key="BotonSimuladoStyle" TargetType="Border">
+            <Setter Property="BackgroundColor" Value="#29B6F6" />
+            <Setter Property="StrokeThickness" Value="0" />
+            <Setter Property="HeightRequest" Value="65" />
+            <Setter Property="Margin" Value="0, 0, 0, 15" />
+            <Setter Property="StrokeShape" Value="RoundRectangle 32" />
+            <Setter Property="Padding" Value="0" />
+        </Style>
+
+        <Style x:Key="IconoStyle" TargetType="Image">
+            <Setter Property="HeightRequest" Value="75" />
+            <Setter Property="WidthRequest" Value="75" />
+            <Setter Property="Aspect" Value="AspectFit" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="Margin" Value="25, 0, 0, 0" />
+        </Style>
+
+        <Style x:Key="TextoStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontSize" Value="21" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="Margin" Value="15, 0, 0, 0" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+
+            <ImageButton Source="ic_usuario.png" 
+                         HeightRequest="60" WidthRequest="60"
+                         HorizontalOptions="Start" Margin="0, 10, 0, 10" 
+                         Clicked="OnPerfilClicked"/>
+
+            <Image Source="logo_barberia.png" 
+                   HeightRequest="180" HorizontalOptions="Center" 
+                   Margin="0,0,0,30" Aspect="AspectFit" />
+
+            <Border Style="{StaticResource BotonSimuladoStyle}">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnReservaClicked" />
+                </Border.GestureRecognizers>
+                <Grid ColumnDefinitions="Auto, *">
+                    <Image Grid.Column="0" Source="fotocalendario.png" Style="{StaticResource IconoStyle}" />
+                    <Label Grid.Column="1" Text="Reserva tu cita" Style="{StaticResource TextoStyle}" />
+                </Grid>
+            </Border>
+
+            <Border Style="{StaticResource BotonSimuladoStyle}">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnServiciosClicked" />
+                </Border.GestureRecognizers>
+                <Grid ColumnDefinitions="Auto, *">
+                    <Image Grid.Column="0" Source="fototijeras.png" Style="{StaticResource IconoStyle}" />
+                    <Label Grid.Column="1" Text="Servicios" Style="{StaticResource TextoStyle}" />
+                </Grid>
+            </Border>
+
+            <Border Style="{StaticResource BotonSimuladoStyle}">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnAnalizaClicked" />
+                </Border.GestureRecognizers>
+                <Grid ColumnDefinitions="Auto, *">
+                    <Image Grid.Column="0" Source="fotolupa.png" Style="{StaticResource IconoStyle}" />
+                    <Label Grid.Column="1" Text="Analiza tu corte" Style="{StaticResource TextoStyle}" />
+                </Grid>
+            </Border>
+
+            <Border Style="{StaticResource BotonSimuladoStyle}">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnWebClicked" />
+                </Border.GestureRecognizers>
+                <Grid ColumnDefinitions="Auto, *">
+                    <Image Grid.Column="0" Source="fotoweb.png" Style="{StaticResource IconoStyle}" />
+                    <Label Grid.Column="1" Text="Web" Style="{StaticResource TextoStyle}" />
+                </Grid>
+            </Border>
+
+            <Border Style="{StaticResource BotonSimuladoStyle}">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnConocenosClicked" />
+                </Border.GestureRecognizers>
+                <Grid ColumnDefinitions="Auto, *">
+                    <Image Grid.Column="0" Source="fotoconocenos.png" Style="{StaticResource IconoStyle}" />
+                    <Label Grid.Column="1" Text="Conócenos" Style="{StaticResource TextoStyle}" />
+                </Grid>
+            </Border>
+
+            <Border Style="{StaticResource BotonSimuladoStyle}">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnContactarClicked" />
+                </Border.GestureRecognizers>
+                <Grid ColumnDefinitions="Auto, *">
+                    <Image Grid.Column="0" Source="fotocontacto.png" Style="{StaticResource IconoStyle}" />
+                    <Label Grid.Column="1" Text="Contactar" Style="{StaticResource TextoStyle}" />
+                </Grid>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
