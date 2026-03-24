@@ -39,7 +39,16 @@ public partial class MainPage : ContentPage
 
     private async void OnPerfilClicked(object sender, EventArgs e)
     {
-        
-        await Shell.Current.GoToAsync(nameof(LoginPage));
+        // Verificamos si nadie ha iniciado sesión
+        if (SesionGlobal.UsuarioActual == null)
+        {
+            // inicia sesión
+            await Shell.Current.GoToAsync(nameof(LoginPage));
+        }
+        else
+        {
+            // Ya inició sesión, va a ver sus datos
+            await Shell.Current.GoToAsync(nameof(PerfilPage));
+        }
     }
 }
