@@ -8,5 +8,7 @@ public partial class AppShell : Shell
 
         // Registra la ruta hacia la página de Login
         Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
+
+        Routing.RegisterRoute(nameof(RegisterPage), typeof(RegisterPage)); // Añade esta línea
     }
 }

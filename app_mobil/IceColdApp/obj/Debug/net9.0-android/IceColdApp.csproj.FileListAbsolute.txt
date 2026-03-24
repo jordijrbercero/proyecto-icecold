@@ -2291,3 +2291,9 @@ C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\android\assets\x86_64\DnsClient.dll
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\android\assets\x86_64\MongoDB.Bson.dll
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\android\assets\x86_64\MongoDB.Driver.dll
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\android\assets\x86_64\SharpCompress.dll
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\android\assets\x86_64\Snappier.dll
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\android\assets\x86_64\ZstdSharp.dll

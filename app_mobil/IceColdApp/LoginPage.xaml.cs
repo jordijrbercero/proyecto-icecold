@@ -13,9 +13,9 @@ public partial class LoginPage : ContentPage
         DisplayAlert("Aviso", "Lógica de login en construcción", "OK");
     }
 
-    private void OnRegisterClicked(object sender, EventArgs e)
+    private async void OnRegisterClicked(object sender, EventArgs e)
     {
-        // Aquí irá la lógica para ir a una página de registro o cambiar la vista
-        DisplayAlert("Aviso", "Lógica de registro en construcción", "OK");
+        
+        await Shell.Current.GoToAsync(nameof(RegisterPage));
     }
 }

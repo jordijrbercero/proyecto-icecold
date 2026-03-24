@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IceColdApp.RegisterPage"
+             Title="Crear Cuenta"
+             BackgroundColor="#0B0F19">
+
+    <VerticalStackLayout Spacing="20" Padding="30" VerticalOptions="Center">
+
+        <Label Text="Únete a la Barbería" FontSize="24" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" />
+
+        <Entry x:Name="NombreEntry" Placeholder="Tu Nombre" TextColor="White" PlaceholderColor="LightGray"/>
+        <Entry x:Name="EmailEntry" Placeholder="Correo electrónico" Keyboard="Email" TextColor="White" PlaceholderColor="LightGray"/>
+        <Entry x:Name="PasswordEntry" Placeholder="Contraseña" IsPassword="True" TextColor="White" PlaceholderColor="LightGray"/>
+
+        <Button Text="Registrarme" BackgroundColor="#29B6F6" TextColor="White" CornerRadius="20" Clicked="OnGuardarRegistroClicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>
