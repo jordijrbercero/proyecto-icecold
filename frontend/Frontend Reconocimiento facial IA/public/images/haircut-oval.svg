@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6d6c3"/>
+      <stop offset="100%" stop-color="#e8a87c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="800" cy="430" rx="230" ry="290" fill="#f1c7a3"/>
+  <path d="M570 360c20-170 460-170 480 0 8 65-8 125-8 125-35-55-100-78-232-78s-195 23-232 78c0 0-16-60-8-125z" fill="#5b3a2e"/>
+  <text x="800" y="760" font-family="Georgia, serif" font-size="64" text-anchor="middle" fill="#2d1f1a">Capas Medias</text>
+  <text x="800" y="820" font-family="Georgia, serif" font-size="44" text-anchor="middle" fill="#2d1f1a">Flequillo Lateral</text>
+</svg>
