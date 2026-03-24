@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Ice Cold | Plataforma de reservas para barberías con IA',
-  description: 'Ayudamos a barberías a digitalizarse con un sistema de reservas online y recomendaciones de cortes mediante inteligencia artificial.',
+  title: 'Ice Cold Barbershop',
+  description: 'Tu barbería de confianza. Reserva tu cita, conoce nuestros servicios y analiza tu corte ideal.',
   generator: 'v0.app',
   icons: {
     icon: [

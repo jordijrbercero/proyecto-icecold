@@ -4,12 +4,15 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
+import { barbershopData } from "@/lib/data"
 
 const navLinks = [
-  { href: "#como-funciona", label: "Cómo funciona" },
-  { href: "#beneficios", label: "Beneficios" },
-  { href: "#tecnologia", label: "Tecnología" },
-  { href: "#faq", label: "FAQ" },
+  { href: "#servicios", label: "Servicios" },
+  { href: "#galeria", label: "Galería" },
+  { href: "#analiza", label: "Analiza tu Corte" },
+  { href: "#nosotros", label: "Nosotros" },
+  { href: "#ubicacion", label: "Ubicación" },
+  { href: "#contacto", label: "Contacto" },
 ]
 
 export function Header() {
@@ -23,12 +26,12 @@ export function Header() {
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/images/logo.png"
-              alt="Ice Cold"
-              width={64}
-              height={64}
-              className="w-14 h-14 md:w-30 md:h-30 object-contain"
+              alt={barbershopData.name}
+              width={50}
+              height={50}
+              className="w-10 h-10 md:w-12 md:h-12 object-contain"
             />
-            <span className="text-foreground font-bold text-lg">
+            <span className="hidden sm:block text-foreground font-semibold text-lg">
               Ice Cold
             </span>
           </Link>
@@ -46,12 +49,14 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Badge Desktop */}
-          <div className="hidden lg:flex items-center">
-            <span className="text-[#4FD1FF] text-xs font-medium bg-[#4FD1FF]/10 border border-[#4FD1FF]/30 px-3 py-1.5 rounded-full">
-              Próximamente
-            </span>
-          </div>
+          {/* CTA Button Desktop */}
+          <Link
+            href={`https://wa.me/${barbershopData.contact.whatsapp}`}
+            target="_blank"
+            className="hidden lg:flex items-center gap-2 bg-gradient-to-r from-[#4FD1FF] to-[#3BA6E8] text-[#071B3A] px-5 py-2.5 rounded-full font-semibold text-sm hover:shadow-lg hover:shadow-[#4FD1FF]/25 transition-all"
+          >
+            Reservar Cita
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -78,11 +83,14 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <div className="mt-4 px-4">
-              <span className="text-[#4FD1FF] text-xs font-medium bg-[#4FD1FF]/10 border border-[#4FD1FF]/30 px-3 py-1.5 rounded-full">
-                Próximamente
-              </span>
-            </div>
+            <Link
+              href={`https://wa.me/${barbershopData.contact.whatsapp}`}
+              target="_blank"
+              onClick={() => setIsMenuOpen(false)}
+              className="mt-4 flex items-center justify-center gap-2 bg-gradient-to-r from-[#4FD1FF] to-[#3BA6E8] text-[#071B3A] px-5 py-3 rounded-full font-semibold"
+            >
+              Reservar Cita
+            </Link>
           </nav>
         </div>
       )}

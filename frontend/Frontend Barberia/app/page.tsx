@@ -1,10 +1,10 @@
 import { Header } from "@/components/sections/header"
 import { Hero } from "@/components/sections/hero"
-import { HowItWorks } from "@/components/sections/how-it-works"
-import { Benefits } from "@/components/sections/benefits"
-import { Technology } from "@/components/sections/technology"
-import { FAQ } from "@/components/sections/faq"
-import { Vision } from "@/components/sections/vision"
+import { Services } from "@/components/sections/services"
+import { Gallery } from "@/components/sections/gallery"
+import { Analyze } from "@/components/sections/analyze"
+import { About } from "@/components/sections/about"
+import { Location } from "@/components/sections/location"
 import { Footer } from "@/components/sections/footer"
 
 export default function Home() {
@@ -12,11 +12,11 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Header />
       <Hero />
-      <HowItWorks />
-      <Benefits />
-      <Technology />
-      <FAQ />
-      <Vision />
+      <Services />
+      <Gallery />
+      <Analyze />
+      <About />
+      <Location />
       <Footer />
     </main>
   )

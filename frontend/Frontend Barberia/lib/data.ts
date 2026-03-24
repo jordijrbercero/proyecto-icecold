@@ -1,105 +1,127 @@
-export const platformData = {
-  name: "Ice Cold",
-  tagline: "La plataforma para barberías que combina reservas online y recomendaciones de cortes con IA",
-  description: "Estamos construyendo una nueva forma de descubrir cortes de pelo: analiza tu rostro, encuentra tu estilo ideal y reserva fácilmente.",
+export const barbershopData = {
+  name: "Ice Cold Barbershop",
+  slogan: "Donde el estilo cobra vida",
+  description: "Expertos en cortes clásicos y modernos. Tu barbería de confianza con más de 10 años de experiencia.",
   
   contact: {
-    email: "hola@icecold.io",
-    instagram: "icecold_app",
+    phone: "+34 612 345 678",
+    whatsapp: "34612345678",
+    email: "info@icecold.es",
+    instagram: "icecold_barbershop",
   },
-
-  howItWorks: [
+  
+  location: {
+    address: "Calle Gran Vía, 45",
+    city: "Madrid",
+    postalCode: "28013",
+    country: "España",
+    googleMapsUrl: "https://maps.google.com/?q=Gran+Via+45+Madrid",
+    coordinates: {
+      lat: 40.4200,
+      lng: -3.7025,
+    }
+  },
+  
+  hours: [
+    { day: "Lunes", hours: "Cerrado" },
+    { day: "Martes", hours: "10:00 - 20:00" },
+    { day: "Miércoles", hours: "10:00 - 20:00" },
+    { day: "Jueves", hours: "10:00 - 20:00" },
+    { day: "Viernes", hours: "10:00 - 21:00" },
+    { day: "Sábado", hours: "09:00 - 18:00" },
+    { day: "Domingo", hours: "Cerrado" },
+  ],
+  
+  services: [
     {
-      step: 1,
-      title: "Escanea tu rostro",
-      description: "El cliente utiliza la cámara para analizar su cara de forma rápida y segura.",
-      icon: "scan",
+      id: 1,
+      name: "Corte Clásico",
+      description: "Corte tradicional con tijera y máquina, incluye lavado y peinado.",
+      price: 15,
+      duration: "30 min",
     },
     {
-      step: 2,
-      title: "La IA recomienda el mejor corte",
-      description: "Nuestro sistema analiza la forma del rostro y sugiere estilos que favorecen al cliente.",
-      icon: "sparkles",
+      id: 2,
+      name: "Corte + Barba",
+      description: "Corte completo más perfilado y arreglo de barba con navaja.",
+      price: 25,
+      duration: "45 min",
     },
     {
-      step: 3,
-      title: "Reserva fácilmente",
-      description: "El cliente puede reservar en barberías que utilicen la plataforma.",
-      icon: "calendar",
+      id: 3,
+      name: "Degradado / Fade",
+      description: "Corte con degradado personalizado, bajo, medio o alto.",
+      price: 18,
+      duration: "35 min",
+    },
+    {
+      id: 4,
+      name: "Arreglo de Barba",
+      description: "Perfilado, recorte y cuidado de barba con productos premium.",
+      price: 12,
+      duration: "20 min",
+    },
+    {
+      id: 5,
+      name: "Afeitado Clásico",
+      description: "Afeitado tradicional con navaja, toalla caliente y aftershave.",
+      price: 15,
+      duration: "25 min",
+    },
+    {
+      id: 6,
+      name: "Tratamiento Capilar",
+      description: "Tratamiento hidratante y nutritivo para el cabello.",
+      price: 20,
+      duration: "30 min",
     },
   ],
-
-  benefits: [
+  
+  team: [
     {
-      title: "Más reservas",
-      description: "Un sistema moderno que facilita que los clientes encuentren y reserven barberías en cualquier momento.",
-      icon: "trending",
+      id: 1,
+      name: "Carlos Mendoza",
+      role: "Fundador & Master Barber",
+      bio: "Con más de 15 años de experiencia, Carlos fundó Ice Cold con la visión de crear un espacio único donde el estilo clásico se encuentra con las tendencias modernas.",
+      specialties: ["Fades", "Cortes clásicos", "Diseños"],
     },
     {
-      title: "Clientes más satisfechos",
-      description: "La IA ayuda a elegir un corte que realmente favorece al cliente, reduciendo malentendidos.",
-      icon: "smile",
+      id: 2,
+      name: "Miguel Ángel Torres",
+      role: "Senior Barber",
+      bio: "Especialista en degradados y técnicas modernas. Miguel trae creatividad y precisión a cada corte.",
+      specialties: ["Degradados", "Texturas", "Barba"],
     },
     {
-      title: "Diferenciación tecnológica",
-      description: "Las barberías podrán ofrecer una experiencia innovadora basada en inteligencia artificial.",
-      icon: "star",
-    },
-    {
-      title: "Menos indecisión del cliente",
-      description: "Los clientes llegan sabiendo qué corte quieren, eliminando el típico 'no sé qué cortarme'.",
-      icon: "target",
+      id: 3,
+      name: "David Ruiz",
+      role: "Barber & Stylist",
+      bio: "Apasionado por las últimas tendencias, David combina técnica clásica con estilos contemporáneos.",
+      specialties: ["Tendencias", "Color", "Styling"],
     },
   ],
-
-  technology: {
-    title: "Inteligencia artificial aplicada al estilo personal",
-    description: "Nuestro sistema analiza características faciales para recomendar los estilos de corte que mejor se adaptan a cada persona.",
+  
+  gallery: [
+    { id: 1, alt: "Degradado bajo con línea" },
+    { id: 2, alt: "Corte clásico con barba" },
+    { id: 3, alt: "Fade medio texturizado" },
+    { id: 4, alt: "Diseño geométrico" },
+    { id: 5, alt: "Pompadour moderno" },
+    { id: 6, alt: "Buzz cut con degradado" },
+  ],
+  
+  about: {
+    title: "Más que una barbería",
+    description: "Ice Cold Barbershop nació en 2014 con una misión clara: ofrecer servicios de barbería de primera calidad en un ambiente único. Combinamos técnicas tradicionales con las últimas tendencias para crear looks personalizados que reflejan tu estilo.",
     features: [
-      {
-        title: "Forma del rostro",
-        description: "Detectamos si el rostro es ovalado, redondo, cuadrado, alargado u otras formas.",
-      },
-      {
-        title: "Proporciones faciales",
-        description: "Analizamos las proporciones entre frente, nariz, mandíbula y pómulos.",
-      },
-      {
-        title: "Línea de la mandíbula",
-        description: "Evaluamos la definición y ángulo de la mandíbula para sugerir cortes que la favorezcan.",
-      },
-      {
-        title: "Frente y pómulos",
-        description: "Consideramos el tamaño de la frente y la estructura de los pómulos.",
-      },
+      "Más de 10 años de experiencia",
+      "Productos premium de barbería",
+      "Ambiente exclusivo y relajado",
+      "Atención personalizada",
     ],
-  },
-
-  faq: [
-    {
-      question: "¿Cómo funcionará el escáner de IA?",
-      answer: "El cliente accederá a la web de la barbería, activará la cámara y nuestro algoritmo analizará su rostro en segundos. Basándose en la forma de la cara, proporciones y características faciales, sugerirá los cortes que mejor le favorecerán.",
-    },
-    {
-      question: "¿Se necesitará hardware especial?",
-      answer: "No, todo funcionará a través del navegador web. Los clientes solo necesitarán un smartphone o tablet con cámara.",
-    },
-    {
-      question: "¿Cuándo estará disponible la plataforma?",
-      answer: "Estamos en fase de desarrollo. Síguenos en redes sociales para estar al tanto de las novedades y el lanzamiento.",
-    },
-    {
-      question: "¿Cómo se integrará con mi negocio?",
-      answer: "Proporcionaremos un enlace único para cada barbería. Podrás compartirlo en redes sociales, WhatsApp, o añadirlo a tu web existente.",
-    },
-  ],
-
-  vision: {
-    title: "La próxima generación de barberías será digital",
-    description: "Estamos desarrollando una plataforma que conectará inteligencia artificial, reservas online y barberías para crear una nueva experiencia para los clientes.",
   },
 }
 
-export type HowItWorksStep = typeof platformData.howItWorks[number]
-export type Benefit = typeof platformData.benefits[number]
-export type FAQ = typeof platformData.faq[number]
+export type Service = typeof barbershopData.services[number]
+export type TeamMember = typeof barbershopData.team[number]
+export type GalleryItem = typeof barbershopData.gallery[number]
