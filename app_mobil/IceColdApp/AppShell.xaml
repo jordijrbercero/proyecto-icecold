@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="IceColdApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:IceColdApp"
+    Shell.FlyoutBehavior="Flyout"
+    Title="IceCold"
+    
+    Shell.BackgroundColor="#29B6F6" 
+    Shell.ForegroundColor="#FFFFFF"
+    Shell.TitleColor="#FFFFFF"
+    Shell.FlyoutBackgroundColor="#29B6F6">
+
+
+    <ShellContent
+        Title="IceCold Barbershop"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+</Shell>
