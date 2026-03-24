@@ -35,10 +35,25 @@
     <ScrollView>
         <VerticalStackLayout Padding="20">
 
-            <ImageButton Source="ic_usuario.png" 
-                         HeightRequest="60" WidthRequest="60"
-                         HorizontalOptions="Start" Margin="0, 10, 0, 10" 
-                         Clicked="OnPerfilClicked"/>
+            <Border 
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                HeightRequest="60" 
+                WidthRequest="60"
+                Margin="10, 10, 0, 10"
+                Stroke="Transparent" 
+                StrokeThickness="0"
+                BackgroundColor="Transparent">  
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="30"/>
+                </Border.StrokeShape>
+
+                <ImageButton x:Name="BotonPerfil"
+                 Source="ic_usuario.png" 
+                 BackgroundColor="Transparent"
+                 Clicked="OnPerfilClicked"/>
+            </Border>
 
             <Image Source="logo_barberia.png" 
                    HeightRequest="180" HorizontalOptions="Center" 

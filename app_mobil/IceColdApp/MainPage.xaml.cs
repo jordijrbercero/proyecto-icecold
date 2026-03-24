@@ -37,18 +37,37 @@ public partial class MainPage : ContentPage
         await DisplayAlert("Contacto", "Mostrando información de contacto", "OK");
     }
 
-    private async void OnPerfilClicked(object sender, EventArgs e)
+    protected override void OnAppearing()
     {
-        // Verificamos si nadie ha iniciado sesión
-        if (SesionGlobal.UsuarioActual == null)
+        base.OnAppearing();
+
+        if (SesionGlobal.UsuarioActual != null && !string.IsNullOrEmpty(SesionGlobal.UsuarioActual.FotoPerfilBase64))
         {
-            // inicia sesión
-            await Shell.Current.GoToAsync(nameof(LoginPage));
+            byte[] bytesImagen = Convert.FromBase64String(SesionGlobal.UsuarioActual.FotoPerfilBase64);
+            BotonPerfil.Source = ImageSource.FromStream(() => new MemoryStream(bytesImagen));
+
+           
+            BotonPerfil.Aspect = Aspect.AspectFill;
         }
         else
         {
-            // Ya inició sesión, va a ver sus datos
-            await Shell.Current.GoToAsync(nameof(PerfilPage));
+            BotonPerfil.Source = "ic_usuario.png";
+
+            
+            BotonPerfil.Aspect = Aspect.AspectFit;
         }
     }
+    
+
+    private async void OnPerfilClicked(object sender, EventArgs e)
+    {
+        if (SesionGlobal.UsuarioActual == null)
+
+            await Shell.Current.GoToAsync(nameof(LoginPage));
+        else
+
+            await Shell.Current.GoToAsync(nameof(PerfilPage));
+    }
 }
+
+

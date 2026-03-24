@@ -7,7 +7,23 @@
 
     <VerticalStackLayout Spacing="15" Padding="30" VerticalOptions="Center">
 
-        <Image Source="ic_usuario.png" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center" />
+        <Border HorizontalOptions="Center"
+        VerticalOptions="Center"
+        HeightRequest="120" 
+        WidthRequest="120"
+        Margin="0,0,0,15"
+        Stroke="LightGray" 
+        StrokeThickness="2">
+
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="60"/>
+            </Border.StrokeShape>
+
+            <ImageButton x:Name="FotoPerfilImagen"
+                 Source="ic_usuario.png"
+                 Aspect="AspectFill" 
+                 Clicked="OnCambiarFotoClicked" />
+        </Border>
 
         <Label x:Name="NombreLabel" FontSize="28" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" />
         <Label x:Name="EmailLabel" FontSize="18" TextColor="LightGray" HorizontalOptions="Center" Margin="0,0,0,30"/>
