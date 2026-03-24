@@ -12,15 +12,17 @@
                HorizontalOptions="Center" 
                FontAttributes="Bold" />
 
-        <Entry Placeholder="Correo electrónico" 
-               Keyboard="Email" 
-               TextColor="White"
-               PlaceholderColor="LightGray"/>
+        <Entry x:Name="EmailEntry"
+           Placeholder="Correo electrónico" 
+           Keyboard="Email" 
+           TextColor="White"
+           PlaceholderColor="LightGray"/>
 
-        <Entry Placeholder="Contraseña" 
-               IsPassword="True" 
-               TextColor="White"
-               PlaceholderColor="LightGray"/>
+        <Entry x:Name="PasswordEntry"
+           Placeholder="Contraseña" 
+           IsPassword="True" 
+           TextColor="White"
+           PlaceholderColor="LightGray"/>
 
         <Button Text="Entrar" 
                 BackgroundColor="#29B6F6" TextColor="White"

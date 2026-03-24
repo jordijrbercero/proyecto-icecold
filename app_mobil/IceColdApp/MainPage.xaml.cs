@@ -37,9 +37,37 @@ public partial class MainPage : ContentPage
         await DisplayAlert("Contacto", "Mostrando información de contacto", "OK");
     }
 
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        if (SesionGlobal.UsuarioActual != null && !string.IsNullOrEmpty(SesionGlobal.UsuarioActual.FotoPerfilBase64))
+        {
+            byte[] bytesImagen = Convert.FromBase64String(SesionGlobal.UsuarioActual.FotoPerfilBase64);
+            BotonPerfil.Source = ImageSource.FromStream(() => new MemoryStream(bytesImagen));
+
+           
+            BotonPerfil.Aspect = Aspect.AspectFill;
+        }
+        else
+        {
+            BotonPerfil.Source = "ic_usuario.png";
+
+            
+            BotonPerfil.Aspect = Aspect.AspectFit;
+        }
+    }
+    
+
     private async void OnPerfilClicked(object sender, EventArgs e)
     {
-        
-        await Shell.Current.GoToAsync(nameof(LoginPage));
+        if (SesionGlobal.UsuarioActual == null)
+
+            await Shell.Current.GoToAsync(nameof(LoginPage));
+        else
+
+            await Shell.Current.GoToAsync(nameof(PerfilPage));
     }
 }
+
+
