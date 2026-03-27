@@ -42,7 +42,7 @@ export function FaceAnalyzer() {
   useEffect(() => {
     async function loadModels() {
       try {
-        setLoadingStatus("Descargando modelos de deteccion facial...")
+        setLoadingStatus("Descargando modelos de detección facial...")
         const faceApiModule = await import("face-api.js")
         faceapi = faceApiModule as unknown as FaceApiModule
 
@@ -75,7 +75,7 @@ export function FaceAnalyzer() {
       } catch (err) {
         console.error("Error loading face-api models:", err)
         setLoadingStatus(
-          "Error al cargar modelos. Recarga la pagina e intentalo de nuevo."
+          "Error al cargar modelos. Recarga la página e inténtalo de nuevo."
         )
       }
     }
@@ -88,7 +88,6 @@ export function FaceAnalyzer() {
 
       setIsProcessing(true)
       try {
-        // Create image element from captured data
         const img = document.createElement("img")
         img.crossOrigin = "anonymous"
         await new Promise<void>((resolve, reject) => {
@@ -97,7 +96,6 @@ export function FaceAnalyzer() {
           img.src = imageData
         })
 
-        // Detect face and landmarks
         const options = new faceapi.TinyFaceDetectorOptions()
         const detection = await faceapi
           .detectSingleFace(img, options)
@@ -112,16 +110,15 @@ export function FaceAnalyzer() {
           setAnalysis(result)
           setRecommendation(HAIRCUT_RECOMMENDATIONS[result.shape])
         } else {
-          // If no face detected, show a message
           setAnalysis(null)
           setRecommendation(null)
           alert(
-            "No se detecto un rostro. Por favor, asegurate de que tu cara este bien iluminada y centrada."
+            "No se detectó un rostro. Asegúrate de que tu cara esté bien iluminada y centrada."
           )
         }
       } catch (err) {
         console.error("Error analyzing face:", err)
-        alert("Error al analizar la imagen. Por favor, intentalo de nuevo.")
+        alert("Error al analizar la imagen. Por favor, inténtalo de nuevo.")
       } finally {
         setIsProcessing(false)
       }
@@ -136,7 +133,7 @@ export function FaceAnalyzer() {
 
   return (
     <main className="ice-shell">
-      {/* Hero section */}
+      {/* ── Hero ── */}
       <section id="inicio" className="ice-hero overflow-hidden">
         <div className="relative mx-auto max-w-6xl px-6 py-16 md:py-24 text-center">
           <div className="ice-pill inline-flex items-center gap-2 px-4 py-1.5 text-sm text-primary mb-6">
@@ -168,7 +165,7 @@ export function FaceAnalyzer() {
         </div>
       </section>
 
-      {/* Scanner */}
+      {/* ── Scanner section ── */}
       <section id="escaner" className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <div className="ice-panel rounded-3xl p-6 md:p-8">
           <div className="grid gap-4 md:grid-cols-3">
@@ -206,6 +203,7 @@ export function FaceAnalyzer() {
           </div>
 
           <div className="mt-10 lg:mx-auto lg:max-w-3xl">
+            {/* Loading state */}
             {!isModelLoaded && loadingStatus && (
               <div className="flex flex-col items-center gap-4 py-10">
                 <div className="h-10 w-10 rounded-full border-2 border-primary border-t-transparent animate-spin" />
@@ -213,6 +211,7 @@ export function FaceAnalyzer() {
               </div>
             )}
 
+            {/* Webcam — el efecto escáner vive dentro de WebcamCapture */}
             {isModelLoaded && !analysis && (
               <WebcamCapture
                 onCapture={handleCapture}
@@ -220,6 +219,7 @@ export function FaceAnalyzer() {
               />
             )}
 
+            {/* Results */}
             {analysis && recommendation && (
               <AnalysisResults
                 analysis={analysis}
@@ -231,7 +231,7 @@ export function FaceAnalyzer() {
         </div>
       </section>
 
-      {/* Images / Styles */}
+      {/* ── Gallery ── */}
       <section id="estilos" className="mx-auto max-w-6xl px-6 pb-16 md:pb-24">
         <div className="flex flex-col gap-2 text-center mb-10">
           <p className="text-sm text-primary font-medium">Inspiración</p>
@@ -284,7 +284,7 @@ export function FaceAnalyzer() {
         </div>
       </section>
 
-      {/* Reviews */}
+      {/* ── Reviews ── */}
       <section id="resenas" className="mx-auto max-w-6xl px-6 pb-16 md:pb-24">
         <div className="flex flex-col gap-2 text-center mb-10">
           <p className="text-sm text-primary font-medium">Reseñas</p>
@@ -299,23 +299,23 @@ export function FaceAnalyzer() {
         <div className="grid gap-5 md:grid-cols-3">
           <TestimonialCard
             name="Álvaro"
-            title="“Me clavó el estilo.”"
+            title="Me clavó el estilo."
             text="El escáner acertó con el corte que mejor me quedaba. Rápido y muy fácil."
           />
           <TestimonialCard
             name="Marcos"
-            title="“Experiencia futurista.”"
+            title="Experiencia futurista."
             text="La sensación es premium: cámara, escaneo y recomendación en un momento."
           />
           <TestimonialCard
             name="Dani"
-            title="“Innovación que se nota.”"
+            title="Innovación que se nota."
             text="Me gustó que fuese 100% personalizado. Te da confianza antes de cortarte."
           />
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* ── CTA ── */}
       <section id="reserva" className="mx-auto max-w-6xl px-6 pb-20 md:pb-28">
         <div className="ice-card rounded-3xl p-8 md:p-12 text-center overflow-hidden relative">
           <div className="ice-cta-glow" aria-hidden="true" />
@@ -330,6 +330,34 @@ export function FaceAnalyzer() {
               Instalar App IceCold
             </Button>
           </div>
+
+          {/* Instagram */}
+          <div className="mt-6 flex items-center justify-center gap-3">
+            <a
+              href="https://instagram.com/icecoldbarberapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-5 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/20"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+              @icecoldbarberapp
+            </a>
+          </div>
+
           <div className="mt-6 flex items-center justify-center gap-2 text-xs text-muted-foreground">
             <Star className="h-4 w-4 text-primary" />
             <span>Premium · Tecnología · Estilo</span>
@@ -339,6 +367,8 @@ export function FaceAnalyzer() {
     </main>
   )
 }
+
+// ─── Sub-components ───────────────────────────────────────────────────────────
 
 function StepCard({
   icon,
