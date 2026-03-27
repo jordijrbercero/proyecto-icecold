@@ -1,34 +1,49 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IceColdApp.PerfilPage"
              Title="Mi Perfil"
              BackgroundColor="#0B0F19">
 
-    <VerticalStackLayout Spacing="15" Padding="30" VerticalOptions="Center">
+        <VerticalStackLayout Spacing="15" Padding="30" VerticalOptions="Center">
 
-        <Border HorizontalOptions="Center"
-        VerticalOptions="Center"
-        HeightRequest="120" 
-        WidthRequest="120"
-        Margin="0,0,0,15"
-        Stroke="LightGray" 
-        StrokeThickness="2">
+            <Border HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="120" 
+                WidthRequest="120"
+                Margin="0,0,0,15"
+                Stroke="LightGray" 
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 60">
+                <ImageButton x:Name="FotoPerfilImagen"
+                         Source="ic_usuario.png"
+                         Aspect="AspectFill" 
+                         Padding="0"
+                         WidthRequest="120"
+                         HeightRequest="120"
+                         BackgroundColor="Transparent"
+                         Clicked="OnCambiarFotoClicked" />
+            </Border>
 
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="60"/>
-            </Border.StrokeShape>
+            <Label x:Name="NombreLabel" 
+               FontSize="28" 
+               TextColor="White" 
+               HorizontalOptions="Center" 
+               FontAttributes="Bold" />
 
-            <ImageButton x:Name="FotoPerfilImagen"
-                 Source="ic_usuario.png"
-                 Aspect="AspectFill" 
-                 Clicked="OnCambiarFotoClicked" />
-        </Border>
+            <Label x:Name="EmailLabel" 
+               FontSize="18" 
+               TextColor="LightGray" 
+               HorizontalOptions="Center" 
+               Margin="0,0,0,30"/>
 
-        <Label x:Name="NombreLabel" FontSize="28" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" />
-        <Label x:Name="EmailLabel" FontSize="18" TextColor="LightGray" HorizontalOptions="Center" Margin="0,0,0,30"/>
+            <Button Text="Cerrar Sesión" 
+                BackgroundColor="#1CD7FF" 
+                TextColor="White" 
+                CornerRadius="20" 
+                FontAttributes="Bold"
+                HeightRequest="50"
+                Clicked="OnCerrarSesionClicked"/>
 
-        <Button Text="Cerrar Sesión" BackgroundColor="#1CD7FF" TextColor="White" CornerRadius="20" Clicked="OnCerrarSesionClicked"/>
-
-    </VerticalStackLayout>
-</ContentPage>
+        </VerticalStackLayout>
+    </ContentPage>

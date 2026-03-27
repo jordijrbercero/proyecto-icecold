@@ -1,14 +1,9 @@
 using MongoDB.Driver;
-using Microsoft.Maui.Controls;
-using System;
 
 namespace IceColdApp;
 
 public partial class RegisterPage : ContentPage
 {
-    
-    string conexionMongo = "mongodb://10.0.2.2:27017";
-
     public RegisterPage()
     {
         InitializeComponent();
@@ -16,9 +11,7 @@ public partial class RegisterPage : ContentPage
 
     private async void OnGuardarRegistroClicked(object sender, EventArgs e)
     {
-        
-       
-
+        // Asegúrate de que los x:Name en tu XAML coinciden con estos
         string nombre = NombreEntry.Text;
         string email = EmailEntry.Text;
         string password = PasswordEntry.Text;
@@ -29,21 +22,32 @@ public partial class RegisterPage : ContentPage
             return;
         }
 
-        MongoClient cliente = new MongoClient(conexionMongo);
-        IMongoDatabase baseDeDatos = cliente.GetDatabase("IceColdDB");
-        IMongoCollection<Usuario> coleccionUsuarios = baseDeDatos.GetCollection<Usuario>("Usuarios");
-
-        Usuario nuevoUsuario = new Usuario
+        try
         {
-            Nombre = nombre,
-            Email = email,
-            Password = password
-        };
+            string conexionMongo = "mongodb://jordijrbercero_db_user:L3omessi10$@ac-ogywvuk-shard-00-00.snxrhd7.mongodb.net:27017,ac-ogywvuk-shard-00-01.snxrhd7.mongodb.net:27017,ac-ogywvuk-shard-00-02.snxrhd7.mongodb.net:27017/?ssl=true&replicaSet=atlas-129cbo-shard-0&authSource=admin&appName=IceColdDB";
+            
+            MongoClient cliente = new MongoClient(conexionMongo);
+            IMongoDatabase baseDeDatos = cliente.GetDatabase("IceColdDB");
+            IMongoCollection<Usuario> coleccionUsuarios = baseDeDatos.GetCollection<Usuario>("Usuarios");
 
-        // 2. SI SE QUEDA PILLADO, SERÁ EXACTAMENTE EN ESTA LÍNEA
-        await coleccionUsuarios.InsertOneAsync(nuevoUsuario);
+            Usuario nuevoUsuario = new Usuario
+            {
+                Nombre = nombre,
+                Email = email,
+                Password = password
+            };
 
-        await DisplayAlert("Bienvenido", "Usuario registrado correctamente ", "OK");
-        await Shell.Current.GoToAsync("..");
+            await coleccionUsuarios.InsertOneAsync(nuevoUsuario);
+
+            await DisplayAlert("Éxito", "Usuario registrado correctamente", "OK");
+            
+            // Vuelve a la pantalla de login
+            await Shell.Current.GoToAsync("..");
+        }
+        catch (Exception ex)
+        {
+            // Si algo falla, te mostrará este mensaje en lugar de cerrarse
+            await DisplayAlert("Error al registrar", $"Motivo: {ex.Message}", "OK");
+        }
     }
 }

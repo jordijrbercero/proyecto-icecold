@@ -8,7 +8,7 @@ namespace IceColdApp;
 public partial class PerfilPage : ContentPage
 {
 
-    string conexionMongo = "mongodb://10.0.2.2:27017";
+    string conexionMongo = "mongodb://jordijrbercero_db_user:L3omessi10$@ac-ogywvuk-shard-00-00.snxrhd7.mongodb.net:27017,ac-ogywvuk-shard-00-01.snxrhd7.mongodb.net:27017,ac-ogywvuk-shard-00-02.snxrhd7.mongodb.net:27017/?ssl=true&replicaSet=atlas-129cbo-shard-0&authSource=admin&appName=IceColdDB";
 
     public PerfilPage()
     {
