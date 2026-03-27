@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <BundleResource Include="C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Release\net9.0-maccatalyst\resizetizer\r\dotnet_bot.png" />
+    <BundleResource Include="C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Release\net9.0-maccatalyst\resizetizer\r\dotnet_bot@2x.png" />
+    <BundleResource Include="C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Release\net9.0-maccatalyst\resizetizer\r\dotnet_bot@3x.png" />
+    <BundleResource Include="C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\fotocalendario.png" />
+    <BundleResource Include="C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\fotoconocenos.png" />
+    <BundleResource Include="C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\fotocontacto.png" />
+    <BundleResource Include="C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\fotolupa.png" />
+    <BundleResource Include="C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\fototijeras.png" />
+    <BundleResource Include="C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\fotoweb.png" />
+    <BundleResource Include="C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\ic_usuario.png" />
+    <BundleResource Include="C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\logo_barberia.png" />
+    <BundleResource Include="obj\Release\net9.0-maccatalyst\resizetizer\f\FluentUI.cs" />
+    <BundleResource Include="obj\Release\net9.0-maccatalyst\resizetizer\f\MauiInfo.plist" />
+    <BundleResource Include="obj\Release\net9.0-maccatalyst\resizetizer\f\OpenSans-Regular.ttf" />
+    <BundleResource Include="obj\Release\net9.0-maccatalyst\resizetizer\f\OpenSans-Semibold.ttf" />
+  </ItemGroup>
+</Project>
