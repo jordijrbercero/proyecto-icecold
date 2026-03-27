@@ -1,10 +1,7 @@
 import type { Metadata, Viewport } from 'next'
-import { Manrope, Sora } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { Snowfall } from '@/components/snowfall'
 import './globals.css'
-
-const _manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" })
-const _sora = Sora({ subsets: ["latin"], variable: "--font-sora" })
 
 export const metadata: Metadata = {
   title: 'IceCold - Asesor de Corte de Pelo con IA',
@@ -39,7 +36,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${_manrope.variable} ${_sora.variable} font-sans antialiased`}>
+      <body className="font-sans antialiased">
+        <Snowfall />
         {children}
         <Analytics />
       </body>

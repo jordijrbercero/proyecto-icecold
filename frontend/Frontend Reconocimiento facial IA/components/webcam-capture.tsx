@@ -86,7 +86,11 @@ export function WebcamCapture({ onCapture, isProcessing }: WebcamCaptureProps) {
 
   return (
     <div className="flex flex-col items-center gap-6">
-      <div className="ice-panel relative w-full max-w-xl overflow-hidden rounded-2xl">
+      <div
+        className={`ice-panel ice-grid-surface ice-scanner relative w-full max-w-xl overflow-hidden rounded-2xl ${
+          isStreaming && !isCaptured ? "ice-scanner-active" : ""
+        }`}
+      >
         {/* Scanning overlay animation */}
         {isStreaming && !isCaptured && (
           <div className="absolute inset-0 z-10 pointer-events-none">
