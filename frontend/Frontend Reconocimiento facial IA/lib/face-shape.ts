@@ -56,69 +56,171 @@ export const FACE_SHAPE_INFO: Record<
   },
 }
 
-export const HAIRCUT_RECOMMENDATIONS: Record<FaceShape, HaircutRecommendation> =
-  {
-    oval: {
-      name: "Capas Medias con Flequillo Lateral",
+export const HAIRCUT_RECOMMENDATIONS: Record<
+  FaceShape,
+  HaircutRecommendation[]
+> = {
+  oval: [
+    {
+      name: "Middle Part",
       description:
-        "Un corte de capas medias con flequillo lateral realza tus proporciones naturales. La forma ovalada es la mas versatil, asi que puedes experimentar con muchos estilos.",
-      image: "/images/haircut-oval.svg",
+        "La raya al medio aprovecha la simetria natural del rostro ovalado y da un look limpio y moderno.",
+      image: "/img/middlepart.webp",
       tips: [
-        "Experimenta con diferentes longitudes",
-        "Las capas largas o medianas te favorecen",
-        "El flequillo lateral anade dinamismo",
-        "Evita demasiado volumen en la parte superior",
+        "Mantener volumen medio en los laterales",
+        "Funciona bien con largo medio",
+        "Peina con acabado natural",
+        "Recorta puntas cada 3-4 semanas",
       ],
     },
-    round: {
-      name: "Capas Largas con Volumen Superior",
+    {
+      name: "Side Part",
       description:
-        "Las capas largas y angulares crean la ilusion de un rostro mas alargado. El volumen en la parte superior equilibra las proporciones redondeadas.",
-      image: "/images/haircut-round.svg",
+        "Un side part define estructura sin endurecer facciones y encaja muy bien en rostros proporcionados.",
+      image: "/img/sidepart.webp",
       tips: [
-        "Anade volumen en la coronilla",
-        "Evita cortes a la altura de la barbilla",
-        "Las capas largas alargan el rostro visualmente",
-        "El pelo liso a los lados reduce el ancho",
+        "Marca una raya limpia con peine",
+        "Usa pomada ligera para control",
+        "Mantener laterales ordenados",
+        "Ideal para estilo clasico o formal",
       ],
     },
-    square: {
-      name: "Bob Ondulado con Capas Suaves",
+    {
+      name: "French Crop",
       description:
-        "Un bob ondulado suaviza los angulos de la mandibula. Las capas suaves alrededor del rostro crean un look mas delicado y femenino.",
-      image: "/images/haircut-square.svg",
+        "El french crop aporta textura frontal y es facil de mantener para un estilo actual.",
+      image: "/img/frenchcrop.webp",
       tips: [
-        "Las ondas suavizan la mandibula angular",
-        "Evita cortes muy geometricos",
-        "Las capas laterales reducen la apariencia cuadrada",
-        "El flequillo lateral complementa esta forma",
+        "Texturiza la parte superior",
+        "Flequillo corto para marcar frente",
+        "Laterales limpios para contraste",
+        "Perfecto si buscas bajo mantenimiento",
       ],
     },
-    heart: {
-      name: "Bob a la Altura de la Barbilla",
+  ],
+  round: [
+    {
+      name: "Burst Fade",
       description:
-        "Un bob a la altura de la barbilla anade amplitud donde mas se necesita, equilibrando la frente mas amplia con la mandibula estrecha.",
-      image: "/images/haircut-heart.svg",
+        "El burst fade estiliza visualmente el rostro redondo al crear altura y contraste lateral.",
+      image: "/img/burstfade.jpg",
       tips: [
-        "Anade volumen a la altura de la barbilla",
-        "La raya lateral equilibra la frente",
-        "Evita demasiado volumen en la parte superior",
-        "Las capas que terminan en la barbilla son ideales",
+        "Sube volumen en la zona superior",
+        "Evita flequillos pesados y rectos",
+        "Mantener degradado bien definido",
+        "Textura arriba para alargar visualmente",
       ],
     },
-    oblong: {
-      name: "Corte con Flequillo y Volumen Lateral",
+    {
+      name: "Mid Fade con Quiff",
       description:
-        "Un corte a la altura de los hombros con flequillo completo y volumen lateral acorta visualmente el rostro y anade la amplitud necesaria.",
-      image: "/images/haircut-oblong.svg",
+        "El quiff con degradado medio aporta verticalidad y equilibra mejillas anchas.",
+      image: "/img/midfadeconquif.jpg",
       tips: [
-        "El flequillo acorta visualmente el rostro",
-        "Anade volumen a los lados",
-        "Evita el cabello muy largo y liso",
-        "Las ondas y rizos sueltos aportan amplitud",
+        "Seca elevando raiz frontal",
+        "Usa cera mate para fijacion ligera",
+        "Laterales mas cortos para estilizar",
+        "Repaso cada 2-3 semanas",
       ],
     },
-  }
+    {
+      name: "Low Fade",
+      description:
+        "Un low fade bien trabajado reduce volumen lateral y da una silueta mas alargada.",
+      image: "/img/lowfade.jpg",
+      tips: [
+        "Mantener transicion limpia",
+        "Combinar con parte superior texturizada",
+        "Evita dejar demasiado ancho en lados",
+        "Ideal para look sobrio y moderno",
+      ],
+    },
+  ],
+  square: [
+    {
+      name: "Taper Fade",
+      description:
+        "El taper fade suaviza lineas fuertes de mandibula manteniendo un acabado profesional.",
+      image: "/img/taperfade.webp",
+      tips: [
+        "No subas demasiado el degradado",
+        "Conserva algo de largo arriba",
+        "Peinado con textura para suavizar",
+        "Muy versatil para diario",
+      ],
+    },
+    {
+      name: "Low Taper Fade",
+      description:
+        "El low taper fade conserva estructura pero baja dureza en contornos para un equilibrio natural.",
+      image: "/img/lowtaperfade.webp",
+      tips: [
+        "Contorno limpio sin exagerar lineas",
+        "Laterales discretos para equilibrio",
+        "Acabado natural o semimate",
+        "Combina bien con barba corta",
+      ],
+    },
+  ],
+  heart: [
+    {
+      name: "Buzz Cut",
+      description:
+        "El buzz cut simplifica volumen en la frente y deja un look potente y minimalista.",
+      image: "/img/buzzcut.jpg",
+      tips: [
+        "Usa medidas medias para no endurecer",
+        "Define bien contornos",
+        "Hidrata cuero cabelludo",
+        "Mantenimiento rapido semanal",
+      ],
+    },
+    {
+      name: "Mohicano",
+      description:
+        "El mohicano concentra protagonismo en el centro y reduce peso visual en los lados.",
+      image: "/img/mohicano.jpg",
+      tips: [
+        "Laterales muy limpios para contraste",
+        "Altura controlada en la cresta",
+        "Fijacion flexible para movimiento",
+        "Ideal para estilo atrevido",
+      ],
+    },
+  ],
+  oblong: [
+    {
+      name: "Modern Mullet",
+      description:
+        "El modern mullet aporta cuerpo en zona trasera y lateral para equilibrar rostros alargados.",
+      image: "/img/modernmullet.jpeg",
+      tips: [
+        "No exagerar altura en la coronilla",
+        "Aporta textura en laterales",
+        "Mantener nuca con forma limpia",
+        "Muy bueno para look urbano",
+      ],
+    },
+    {
+      name: "Calvo",
+      description:
+        "El estilo calvo limpio elimina contrastes verticales y proyecta un acabado solido y elegante.",
+      image: "/img/calvo.jpg",
+      tips: [
+        "Afeitado uniforme y regular",
+        "Protector solar en cuero cabelludo",
+        "Hidratacion diaria para brillo sano",
+        "Combina excelente con barba perfilada",
+      ],
+    },
+  ],
+}
+
+export function getHaircutRecommendation(shape: FaceShape): HaircutRecommendation {
+  const options = HAIRCUT_RECOMMENDATIONS[shape]
+  const randomIndex = Math.floor(Math.random() * options.length)
+  return options[randomIndex]
+}
 
 export function analyzeFaceShape(landmarks: number[][]): FaceAnalysis {
   // Key landmark indices for face-api.js 68-point model:
