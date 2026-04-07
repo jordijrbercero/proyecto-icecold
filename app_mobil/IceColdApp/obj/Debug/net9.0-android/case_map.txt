@@ -1,0 +1,14 @@
+appicon\apicon;appicon\apicon
+appicon\appicon;appicon\appicon
+appicon\appicon1;appicon\appicon1
+images\dotnet_bot;images\dotnet_bot
+images\fotocalendario;images\fotocalendario
+images\fotoconocenos;images\fotoconocenos
+images\fotocontacto;images\fotocontacto
+images\fotolupa;images\fotolupa
+images\fototijeras;images\fototijeras
+images\fotoweb;images\fotoweb
+images\ic_usuario;images\ic_usuario
+images\logo_barberia;images\logo_barberia
+raw\aboutassets;raw\AboutAssets
+splash\splash_barberia;splash\splash_barberia
