@@ -14,17 +14,37 @@ public partial class MainPage : ContentPage
 
     private async void OnServiciosClicked(object sender, EventArgs e)
     {
-        await DisplayAlert("Servicios", "Mostrando servicios disponibles", "OK");
+        await Shell.Current.GoToAsync(nameof(ServiciosPage));
     }
 
     private async void OnAnalizaClicked(object sender, EventArgs e)
     {
-        await DisplayAlert("Análisis", "Analizando tu corte...", "OK");
+        string urlfacial = "https://face-id-barber.vercel.app/";
+
+        try
+        {
+            Uri uri = new Uri(urlfacial);
+            await Launcher.Default.OpenAsync(uri);
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", "No se pudo abrir la página web.", "OK");
+        }
     }
 
     private async void OnWebClicked(object sender, EventArgs e)
     {
-        await DisplayAlert("Web", "Abriendo página web", "OK");
+        string urlweb = "https://ice-cold-web.vercel.app/";
+
+        try
+        {
+            Uri uri = new Uri(urlweb);
+            await Launcher.Default.OpenAsync(uri);
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", "No se pudo abrir la página web.", "OK");
+        }
     }
 
     private async void OnConocenosClicked(object sender, EventArgs e)

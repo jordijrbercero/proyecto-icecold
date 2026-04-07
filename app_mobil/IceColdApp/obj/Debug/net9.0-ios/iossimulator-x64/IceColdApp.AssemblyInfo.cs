@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IceColdApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+db756096ff2b81300438a9de79a338c8ebf3d8c6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+33b9875c8c852ab518e9318e4cdc1053a838df5c")]
 [assembly: System.Reflection.AssemblyProductAttribute("IceColdApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IceColdApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
