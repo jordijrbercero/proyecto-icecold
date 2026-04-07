@@ -49,7 +49,7 @@ public partial class MainPage : ContentPage
 
     private async void OnConocenosClicked(object sender, EventArgs e)
     {
-        await DisplayAlert("Conócenos", "Conociendo la barbería", "OK");
+        await Shell.Current.GoToAsync(nameof(ConocenosPage));
     }
 
     private async void OnContactarClicked(object sender, EventArgs e)
