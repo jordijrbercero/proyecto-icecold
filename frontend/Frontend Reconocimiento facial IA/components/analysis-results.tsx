@@ -93,13 +93,12 @@ export function AnalysisResults({
           </h4>
         </div>
 
-        <div className="relative aspect-[16/9] w-full overflow-hidden">
+        <div className="relative flex w-full items-center justify-center overflow-hidden bg-secondary/30 p-4 md:p-6">
           <img
             src={recommendation.image}
             alt={`Corte de pelo recomendado: ${recommendation.name}`}
-            className="h-full w-full object-cover"
+            className="h-auto max-h-[24rem] w-auto max-w-full rounded-xl object-contain md:max-h-[30rem]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
         </div>
 
         <div className="p-6">

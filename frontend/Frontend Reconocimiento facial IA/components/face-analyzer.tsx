@@ -1,13 +1,13 @@
 "use client"
 
-import { useState, useCallback, useEffect } from "react"
+import { useState, useCallback, useEffect, useRef } from "react"
 import type { CSSProperties, ReactNode } from "react"
 import { WebcamCapture } from "@/components/webcam-capture"
 import { AnalysisResults } from "@/components/analysis-results"
 import { Button } from "@/components/ui/button"
 import {
   analyzeFaceShape,
-  HAIRCUT_RECOMMENDATIONS,
+  getHaircutRecommendation,
   type FaceAnalysis,
   type HaircutRecommendation,
 } from "@/lib/face-shape"
@@ -108,7 +108,7 @@ export function FaceAnalyzer() {
           ])
           const result = analyzeFaceShape(landmarks)
           setAnalysis(result)
-          setRecommendation(HAIRCUT_RECOMMENDATIONS[result.shape])
+          setRecommendation(getHaircutRecommendation(result.shape))
         } else {
           setAnalysis(null)
           setRecommendation(null)
@@ -169,24 +169,30 @@ export function FaceAnalyzer() {
       <section id="escaner" className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <div className="ice-panel rounded-3xl p-6 md:p-8">
           <div className="grid gap-4 md:grid-cols-3">
-            <StepCard
-              icon={<ScanFace className="h-5 w-5" />}
-              step="01"
-              title="Analiza tu rostro"
-              description="Detecta puntos clave y proporciones en segundos."
-            />
-            <StepCard
-              icon={<Zap className="h-5 w-5" />}
-              step="02"
-              title="Recomienda el mejor corte"
-              description="Estilos que encajan con tu forma facial."
-            />
-            <StepCard
-              icon={<Scissors className="h-5 w-5" />}
-              step="03"
-              title="100% personalizado"
-              description="Sugerencias adaptadas con IA para ti."
-            />
+            <RevealOnScroll direction="left">
+              <StepCard
+                icon={<ScanFace className="h-5 w-5" />}
+                step="01"
+                title="Analiza tu rostro"
+                description="Detecta puntos clave y proporciones en segundos."
+              />
+            </RevealOnScroll>
+            <RevealOnScroll direction="right" delay={90}>
+              <StepCard
+                icon={<Zap className="h-5 w-5" />}
+                step="02"
+                title="Recomienda el mejor corte"
+                description="Estilos que encajan con tu forma facial."
+              />
+            </RevealOnScroll>
+            <RevealOnScroll direction="left" delay={180}>
+              <StepCard
+                icon={<Scissors className="h-5 w-5" />}
+                step="03"
+                title="100% personalizado"
+                description="Sugerencias adaptadas con IA para ti."
+              />
+            </RevealOnScroll>
           </div>
 
           <div className="mt-10 flex flex-col gap-2">
@@ -245,42 +251,60 @@ export function FaceAnalyzer() {
         </div>
 
         <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-6">
-          <ImageSlot
-            title="Cortes premium"
-            hint="Cortes elegantes y precisos."
-            imageSrc="/images/galeria/corte-premium.png"
+          <RevealOnScroll direction="left" className="lg:col-span-2">
+            <ImageSlot
+              title="Cortes premium"
+              hint="Cortes elegantes y precisos."
+              imageSrc="/images/galeria/corte-premium.png"
+              className="lg:col-span-2"
+            />
+          </RevealOnScroll>
+          <RevealOnScroll
+            direction="right"
+            delay={90}
             className="lg:col-span-2"
-          />
-          <ImageSlot
-            title="Antes / Después"
-            hint="Cambios reales, resultado claro."
-            imageSrc="/images/galeria/antes-despues.png"
+          >
+            <ImageSlot
+              title="Antes / Después"
+              hint="Cambios reales, resultado claro."
+              imageSrc="/images/galeria/antes-despues.png"
+              className="lg:col-span-2"
+            />
+          </RevealOnScroll>
+          <RevealOnScroll
+            direction="left"
+            delay={180}
             className="lg:col-span-2"
-          />
-          <ImageSlot
-            title="Fade & textura"
-            hint="Degradado limpio y textura."
-            imageSrc="/images/galeria/fade-y-textura.png"
-            className="lg:col-span-2"
-          />
-          <ImageSlot
-            title="Estilo clásico"
-            hint="Look atemporal y cuidado."
-            imageSrc="/images/galeria/estilo-clasico.png"
-            imagePosition="center 22%"
-            aspectRatio="16 / 9"
-            minHeight="200px"
-            className="lg:col-span-3"
-          />
-          <ImageSlot
-            title="Look moderno"
-            hint="Tendencia actual con estilo."
-            imageSrc="/images/galeria/look-moderno.png"
-            imagePosition="center 22%"
-            aspectRatio="16 / 9"
-            minHeight="200px"
-            className="lg:col-span-3"
-          />
+          >
+            <ImageSlot
+              title="Fade & textura"
+              hint="Degradado limpio y textura."
+              imageSrc="/images/galeria/fade-y-textura.png"
+              className="lg:col-span-2"
+            />
+          </RevealOnScroll>
+          <RevealOnScroll direction="right" className="lg:col-span-3">
+            <ImageSlot
+              title="Estilo clásico"
+              hint="Look atemporal y cuidado."
+              imageSrc="/images/galeria/estilo-clasico.png"
+              imagePosition="center 22%"
+              aspectRatio="16 / 9"
+              minHeight="200px"
+              className="lg:col-span-3"
+            />
+          </RevealOnScroll>
+          <RevealOnScroll direction="left" delay={90} className="lg:col-span-3">
+            <ImageSlot
+              title="Look moderno"
+              hint="Tendencia actual con estilo."
+              imageSrc="/images/galeria/look-moderno.png"
+              imagePosition="center 22%"
+              aspectRatio="16 / 9"
+              minHeight="200px"
+              className="lg:col-span-3"
+            />
+          </RevealOnScroll>
         </div>
       </section>
 
@@ -297,21 +321,27 @@ export function FaceAnalyzer() {
         </div>
 
         <div className="grid gap-5 md:grid-cols-3">
-          <TestimonialCard
-            name="Álvaro"
-            title="Me clavó el estilo."
-            text="El escáner acertó con el corte que mejor me quedaba. Rápido y muy fácil."
-          />
-          <TestimonialCard
-            name="Marcos"
-            title="Experiencia futurista."
-            text="La sensación es premium: cámara, escaneo y recomendación en un momento."
-          />
-          <TestimonialCard
-            name="Dani"
-            title="Innovación que se nota."
-            text="Me gustó que fuese 100% personalizado. Te da confianza antes de cortarte."
-          />
+          <RevealOnScroll direction="left">
+            <TestimonialCard
+              name="Álvaro"
+              title="Me clavó el estilo."
+              text="El escáner acertó con el corte que mejor me quedaba. Rápido y muy fácil."
+            />
+          </RevealOnScroll>
+          <RevealOnScroll direction="right" delay={90}>
+            <TestimonialCard
+              name="Marcos"
+              title="Experiencia futurista."
+              text="La sensación es premium: cámara, escaneo y recomendación en un momento."
+            />
+          </RevealOnScroll>
+          <RevealOnScroll direction="left" delay={180}>
+            <TestimonialCard
+              name="Dani"
+              title="Innovación que se nota."
+              text="Me gustó que fuese 100% personalizado. Te da confianza antes de cortarte."
+            />
+          </RevealOnScroll>
         </div>
       </section>
 
@@ -369,6 +399,48 @@ export function FaceAnalyzer() {
 }
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
+
+function RevealOnScroll({
+  children,
+  direction = "left",
+  delay = 0,
+  className,
+}: {
+  children: ReactNode
+  direction?: "left" | "right"
+  delay?: number
+  className?: string
+}) {
+  const ref = useRef<HTMLDivElement | null>(null)
+
+  useEffect(() => {
+    const element = ref.current
+    if (!element) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          element.classList.add("is-visible")
+          observer.unobserve(element)
+        }
+      },
+      { threshold: 0.18, rootMargin: "0px 0px -10% 0px" }
+    )
+
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <div
+      ref={ref}
+      className={`reveal-slide ${direction === "right" ? "from-right" : "from-left"} ${className ?? ""}`}
+      style={{ ["--reveal-delay" as string]: `${delay}ms` }}
+    >
+      {children}
+    </div>
+  )
+}
 
 function StepCard({
   icon,

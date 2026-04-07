@@ -88,6 +88,40 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  /* Scrollbar global: estilo redondeado con track transparente */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: oklch(0.9 0.01 255 / 0.55) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: oklch(0.9 0.01 255 / 0.55);
+    border-radius: 999px;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+    min-height: 12px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.95 0.01 255 / 0.75);
+    border: 3px solid transparent;
+    background-clip: padding-box;
+  }
+
+  *::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -387,12 +421,13 @@
       url("/images/gallery-placeholder.jpg"),
       radial-gradient(900px 420px at 20% 10%, oklch(0.8 0.16 200 / 0.12), transparent 60%),
       linear-gradient(135deg, oklch(0.14 0.05 252), oklch(0.19 0.05 252));
-    background-size: cover, cover, auto, auto;
+    background-size: var(--slot-image-size, contain), cover, auto, auto;
     background-position:
       var(--slot-image-position, center),
       var(--slot-image-position, center),
       center,
       center;
+    background-repeat: no-repeat;
     border-bottom: 1px solid oklch(0.8 0.16 200 / 0.12);
     position: relative;
   }
@@ -414,6 +449,31 @@
     pointer-events: none;
     opacity: 0.9;
   }
+
+  .reveal-slide {
+    opacity: 0;
+    filter: blur(3px);
+    transition:
+      opacity 650ms ease,
+      transform 650ms ease,
+      filter 650ms ease;
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: transform, opacity, filter;
+  }
+
+  .reveal-slide.from-left {
+    transform: translateX(-34px);
+  }
+
+  .reveal-slide.from-right {
+    transform: translateX(34px);
+  }
+
+  .reveal-slide.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -424,8 +484,13 @@
     display: none;
   }
   .ice-scanner-active::after,
-  .ice-scanner-hud::before {
+  .ice-scanner-hud::before,
+  .reveal-slide {
     animation: none;
+    transition: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
   }
 }
 
