@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IceColdApp.ContactarPage"
+             Title="Contacto"
+             BackgroundColor="#0A0F1D">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Ponte en Contacto" 
+                   TextColor="White" 
+                   FontSize="28" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" 
+                   Margin="0,10,0,20" />
+
+            <Border BackgroundColor="#1E293B" StrokeThickness="0" Padding="15">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12" />
+                </Border.StrokeShape>
+                <Grid ColumnDefinitions="Auto, *">
+                    <Label Grid.Column="0" Text="📞" FontSize="26" VerticalOptions="Center" Margin="0,0,15,0" />
+                    <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                        <Label Text="Teléfono / WhatsApp" TextColor="#A0AEC0" FontSize="14" />
+                        <Label Text="+34 600 000 000" TextColor="White" FontSize="18" FontAttributes="Bold" />
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+
+            <Border BackgroundColor="#1E293B" StrokeThickness="0" Padding="15">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12" />
+                </Border.StrokeShape>
+                <Grid ColumnDefinitions="Auto, *">
+                    <Label Grid.Column="0" Text="📍" FontSize="26" VerticalOptions="Center" Margin="0,0,15,0" />
+                    <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                        <Label Text="Nuestra Barbería" TextColor="#A0AEC0" FontSize="14" />
+                        <Label Text="Ejemplo 123, Barcelona" TextColor="White" FontSize="16" FontAttributes="Bold" />
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+
+            <Border BackgroundColor="#1E293B" StrokeThickness="0" Padding="15">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12" />
+                </Border.StrokeShape>
+                <Grid ColumnDefinitions="Auto, *">
+                    <Label Grid.Column="0" Text="📱" FontSize="26" VerticalOptions="Center" Margin="0,0,15,0" />
+                    <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                        <Label Text="Instagram" TextColor="#A0AEC0" FontSize="14" />
+                        <Label Text="@IceColdApp" TextColor="White" FontSize="18" FontAttributes="Bold" />
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+
+            <Border BackgroundColor="#1E293B" StrokeThickness="0" Padding="15">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12" />
+                </Border.StrokeShape>
+                <Grid ColumnDefinitions="Auto, *">
+                    <Label Grid.Column="0" Text="✉️" FontSize="26" VerticalOptions="Center" Margin="0,0,15,0" />
+                    <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                        <Label Text="Correo Electrónico" TextColor="#A0AEC0" FontSize="14" />
+                        <Label Text="info@icecold.com" TextColor="White" FontSize="16" FontAttributes="Bold" />
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -54,7 +54,7 @@ public partial class MainPage : ContentPage
 
     private async void OnContactarClicked(object sender, EventArgs e)
     {
-        await DisplayAlert("Contacto", "Mostrando información de contacto", "OK");
+        await Shell.Current.GoToAsync(nameof(ContactarPage));
     }
 
     protected override void OnAppearing()

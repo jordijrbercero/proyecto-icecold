@@ -79,6 +79,9 @@
 	  <Compile Update="ConocenosPage.xaml.cs">
 	    <DependentUpon>ConocenosPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="ContactarPage.xaml.cs">
+	    <DependentUpon>ContactarPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="ServiciosPage.xaml.cs">
 	    <DependentUpon>ServiciosPage.xaml</DependentUpon>
 	  </Compile>
@@ -95,6 +98,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ConocenosPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ContactarPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ServiciosPage.xaml">
