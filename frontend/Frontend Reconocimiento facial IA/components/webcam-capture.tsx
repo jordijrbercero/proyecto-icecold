@@ -3,6 +3,7 @@
 import { useRef, useState, useCallback, useEffect } from "react"
 import { Camera, RotateCcw, Loader2, ScanFace } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import RippleGrid from "@/components/ripple-grid"
 
 interface WebcamCaptureProps {
   onCapture: (imageData: string) => void
@@ -118,11 +119,25 @@ export function WebcamCapture({ onCapture, isProcessing }: WebcamCaptureProps) {
         )}
 
         {!isStreaming && !isCaptured && !error && (
-          <div className="flex aspect-[4/3] flex-col items-center justify-center gap-4 p-8">
-            <div className="rounded-full bg-primary/15 p-6 shadow-[0_0_24px_rgba(76,201,255,0.35)]">
+          <div className="relative flex aspect-[4/3] flex-col items-center justify-center gap-4 overflow-hidden p-8">
+            <RippleGrid
+              className="absolute inset-0 z-0 opacity-80"
+              gridColor="#22d3ee"
+              rippleIntensity={0.035}
+              gridSize={8.5}
+              gridThickness={18}
+              fadeDistance={1.8}
+              vignetteStrength={2.2}
+              glowIntensity={0.2}
+              opacity={0.75}
+              mouseInteractionRadius={0.9}
+            />
+            <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(34,211,238,0.12)_0%,rgba(0,0,0,0)_58%)]" />
+
+            <div className="relative z-10 rounded-full bg-primary/15 p-6 shadow-[0_0_24px_rgba(76,201,255,0.35)]">
               <ScanFace className="h-12 w-12 text-primary" />
             </div>
-            <div className="text-center">
+            <div className="relative z-10 text-center">
               <h3 className="text-lg font-semibold text-foreground">
                 Activa tu camara
               </h3>
@@ -131,7 +146,10 @@ export function WebcamCapture({ onCapture, isProcessing }: WebcamCaptureProps) {
                 rostro
               </p>
             </div>
-            <Button onClick={startCamera} className="ice-button gap-2 px-6">
+            <Button
+              onClick={startCamera}
+              className="relative z-10 ice-button gap-2 px-6"
+            >
               <Camera className="h-4 w-4" />
               Iniciar Camara
             </Button>

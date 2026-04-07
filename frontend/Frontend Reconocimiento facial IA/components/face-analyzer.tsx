@@ -5,6 +5,7 @@ import type { CSSProperties, ReactNode } from "react"
 import { WebcamCapture } from "@/components/webcam-capture"
 import { AnalysisResults } from "@/components/analysis-results"
 import { Button } from "@/components/ui/button"
+import Galaxy from "@/components/galaxy"
 import {
   analyzeFaceShape,
   getHaircutRecommendation,
@@ -133,43 +134,57 @@ export function FaceAnalyzer() {
 
   return (
     <main className="ice-shell">
-      {/* ── Hero ── */}
+      {/* Hero */}
       <section id="inicio" className="ice-hero overflow-hidden">
         <div className="relative mx-auto max-w-6xl px-6 py-16 md:py-24 text-center">
-          <div className="ice-pill inline-flex items-center gap-2 px-4 py-1.5 text-sm text-primary mb-6">
-            <Sparkles className="h-3.5 w-3.5" />
-            Premium · Tech · IA
-          </div>
-          <h1 className="text-5xl font-serif font-bold text-foreground md:text-7xl leading-tight tracking-tight">
-            IceCold
-          </h1>
-          <p className="mt-4 text-2xl md:text-3xl text-foreground/90 font-medium text-balance">
-            Descubre tu pelo ideal
-          </p>
-          <p className="mt-3 text-sm md:text-base text-muted-foreground tracking-wide uppercase">
-            Escáner capilar con Inteligencia Artificial
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-3">
-            <Button asChild size="lg" className="ice-button px-10">
-              <a href="#escaner">Probar escáner</a>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="ice-button-outline px-8"
-            >
-              <a href="#reserva">Reserva / Contacto</a>
-            </Button>
-          </div>
+          <RevealOnScroll direction="left" replay className="inline-block">
+            <div className="ice-pill inline-flex items-center gap-2 px-4 py-1.5 text-sm text-primary mb-6">
+              <Sparkles className="h-3.5 w-3.5" />
+              Premium - Tech - IA
+            </div>
+          </RevealOnScroll>
+
+          <RevealOnScroll direction="right" replay delay={90}>
+            <h1 className="text-5xl font-serif font-bold text-foreground md:text-7xl leading-tight tracking-tight">
+              IceCold
+            </h1>
+          </RevealOnScroll>
+
+          <RevealOnScroll direction="left" replay delay={160}>
+            <p className="mt-4 text-2xl md:text-3xl text-foreground/90 font-medium text-balance">
+              Descubre tu pelo ideal
+            </p>
+          </RevealOnScroll>
+
+          <RevealOnScroll direction="right" replay delay={230}>
+            <p className="mt-3 text-sm md:text-base text-muted-foreground tracking-wide uppercase">
+              Escaner capilar con Inteligencia Artificial
+            </p>
+          </RevealOnScroll>
+
+          <RevealOnScroll direction="left" replay delay={300}>
+            <div className="mt-10 flex items-center justify-center gap-3">
+              <Button asChild size="lg" className="ice-button px-10">
+                <a href="#escaner">Probar escaner</a>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="ice-button-outline px-8"
+              >
+                <a href="#reserva">Reserva / Contacto</a>
+              </Button>
+            </div>
+          </RevealOnScroll>
         </div>
       </section>
 
-      {/* ── Scanner section ── */}
+      {/* Scanner section */}
       <section id="escaner" className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <div className="ice-panel rounded-3xl p-6 md:p-8">
           <div className="grid gap-4 md:grid-cols-3">
-            <RevealOnScroll direction="left">
+            <RevealOnScroll direction="left" className="h-full">
               <StepCard
                 icon={<ScanFace className="h-5 w-5" />}
                 step="01"
@@ -177,7 +192,7 @@ export function FaceAnalyzer() {
                 description="Detecta puntos clave y proporciones en segundos."
               />
             </RevealOnScroll>
-            <RevealOnScroll direction="right" delay={90}>
+            <RevealOnScroll direction="right" delay={90} className="h-full">
               <StepCard
                 icon={<Zap className="h-5 w-5" />}
                 step="02"
@@ -185,7 +200,7 @@ export function FaceAnalyzer() {
                 description="Estilos que encajan con tu forma facial."
               />
             </RevealOnScroll>
-            <RevealOnScroll direction="left" delay={180}>
+            <RevealOnScroll direction="left" delay={180} className="h-full">
               <StepCard
                 icon={<Scissors className="h-5 w-5" />}
                 step="03"
@@ -217,7 +232,7 @@ export function FaceAnalyzer() {
               </div>
             )}
 
-            {/* Webcam — el efecto escáner vive dentro de WebcamCapture */}
+            {/* Webcam - el efecto escaner vive dentro de WebcamCapture */}
             {isModelLoaded && !analysis && (
               <WebcamCapture
                 onCapture={handleCapture}
@@ -237,7 +252,7 @@ export function FaceAnalyzer() {
         </div>
       </section>
 
-      {/* ── Gallery ── */}
+      {/* Gallery */}
       <section id="estilos" className="mx-auto max-w-6xl px-6 pb-16 md:pb-24">
         <div className="flex flex-col gap-2 text-center mb-10">
           <p className="text-sm text-primary font-medium">Inspiración</p>
@@ -245,7 +260,7 @@ export function FaceAnalyzer() {
             Cortes, antes / después y estilo
           </h2>
           <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
-            Inspiración real de cortes y acabados. Úsalo como referencia para tu
+            Inspiracion real de cortes y acabados. Usalo como referencia para tu
             próxima visita.
           </p>
         </div>
@@ -308,7 +323,7 @@ export function FaceAnalyzer() {
         </div>
       </section>
 
-      {/* ── Reviews ── */}
+      {/* Reviews */}
       <section id="resenas" className="mx-auto max-w-6xl px-6 pb-16 md:pb-24">
         <div className="flex flex-col gap-2 text-center mb-10">
           <p className="text-sm text-primary font-medium">Reseñas</p>
@@ -345,24 +360,42 @@ export function FaceAnalyzer() {
         </div>
       </section>
 
-      {/* ── CTA ── */}
+      {/* CTA */}
       <section id="reserva" className="mx-auto max-w-6xl px-6 pb-20 md:pb-28">
         <div className="ice-card rounded-3xl p-8 md:p-12 text-center overflow-hidden relative">
+          <Galaxy
+            className="absolute inset-0 z-0 opacity-30"
+            transparent
+            hueShift={205}
+            saturation={0.04}
+            glowIntensity={0.14}
+            density={0.62}
+            twinkleIntensity={0.12}
+            speed={0.45}
+            starSpeed={0.22}
+            rotationSpeed={0.035}
+            mouseInteraction
+            mouseRepulsion={false}
+          />
+          <div
+            className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.09)_0%,rgba(15,23,42,0.15)_50%,rgba(2,6,23,0.28)_100%)]"
+            aria-hidden="true"
+          />
           <div className="ice-cta-glow" aria-hidden="true" />
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
+          <h2 className="relative z-10 text-3xl md:text-4xl font-serif font-bold text-foreground">
             Reserva o Contacto
           </h2>
-          <p className="mt-2 text-sm text-muted-foreground">
+          <p className="relative z-10 mt-2 text-sm text-muted-foreground">
             Es necesario instalar la app
           </p>
-          <div className="mt-8 flex justify-center">
+          <div className="relative z-10 mt-8 flex justify-center">
             <Button size="lg" className="ice-button ice-button-install px-12">
               Instalar App IceCold
             </Button>
           </div>
 
           {/* Instagram */}
-          <div className="mt-6 flex items-center justify-center gap-3">
+          <div className="relative z-10 mt-6 flex items-center justify-center gap-3">
             <a
               href="https://instagram.com/icecoldbarberapp"
               target="_blank"
@@ -388,7 +421,7 @@ export function FaceAnalyzer() {
             </a>
           </div>
 
-          <div className="mt-6 flex items-center justify-center gap-2 text-xs text-muted-foreground">
+          <div className="relative z-10 mt-6 flex items-center justify-center gap-2 text-xs text-muted-foreground">
             <Star className="h-4 w-4 text-primary" />
             <span>Premium · Tecnología · Estilo</span>
           </div>
@@ -398,18 +431,24 @@ export function FaceAnalyzer() {
   )
 }
 
-// ─── Sub-components ───────────────────────────────────────────────────────────
+// Sub-components
 
 function RevealOnScroll({
   children,
   direction = "left",
   delay = 0,
   className,
+  replay = false,
+  threshold = 0.18,
+  rootMargin = "0px 0px -10% 0px",
 }: {
   children: ReactNode
   direction?: "left" | "right"
   delay?: number
   className?: string
+  replay?: boolean
+  threshold?: number
+  rootMargin?: string
 }) {
   const ref = useRef<HTMLDivElement | null>(null)
 
@@ -421,15 +460,19 @@ function RevealOnScroll({
       ([entry]) => {
         if (entry.isIntersecting) {
           element.classList.add("is-visible")
-          observer.unobserve(element)
+          if (!replay) {
+            observer.unobserve(element)
+          }
+        } else if (replay) {
+          element.classList.remove("is-visible")
         }
       },
-      { threshold: 0.18, rootMargin: "0px 0px -10% 0px" }
+      { threshold, rootMargin }
     )
 
     observer.observe(element)
     return () => observer.disconnect()
-  }, [])
+  }, [replay, rootMargin, threshold])
 
   return (
     <div
@@ -454,12 +497,12 @@ function StepCard({
   description: string
 }) {
   return (
-    <div className="ice-card group rounded-2xl p-5 transition-colors hover:border-primary/40">
+    <div className="ice-card group h-full rounded-2xl p-5 transition-colors hover:border-primary/40">
       <div className="flex items-center gap-3 mb-3">
         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/15 text-primary group-hover:bg-primary/25 transition-colors shadow-[0_0_18px_rgba(76,201,255,0.25)]">
           {icon}
         </div>
-        <span className="text-xs font-mono text-muted-foreground">{step}</span>
+        <span className="text-xs text-muted-foreground">{step}</span>
       </div>
       <h3 className="text-base font-semibold text-foreground mb-1">{title}</h3>
       <p className="text-sm text-muted-foreground leading-relaxed">
