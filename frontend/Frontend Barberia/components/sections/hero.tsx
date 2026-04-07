@@ -1,67 +1,102 @@
 import Image from "next/image"
 import Link from "next/link"
-import { barbershopData } from "@/lib/data"
-import { ChevronDown } from "lucide-react"
+import { ArrowRight, ChevronDown, Sparkles } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-20 pb-12 overflow-hidden">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#071B3A] via-[#0a2347] to-[#071B3A]" />
-      
-      {/* Subtle ice particle effect */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-[#4FD1FF] rounded-full blur-sm animate-pulse" />
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-[#4FD1FF] rounded-full blur-sm animate-pulse delay-300" />
-        <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-[#4FD1FF] rounded-full blur-sm animate-pulse delay-500" />
-        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-[#4FD1FF] rounded-full blur-sm animate-pulse delay-700" />
+    <section className="section-frame min-h-screen px-4 pb-12 pt-28 md:pb-16 md:pt-32">
+      <div className="absolute inset-0">
+        <Image
+          src="/images/barbershop-interior.jpg"
+          alt="Interior de barberia premium"
+          fill
+          priority
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,16,34,0.68)_0%,rgba(7,27,58,0.52)_42%,rgba(7,27,58,0.74)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,16,32,0.22)_0%,rgba(7,27,58,0.58)_100%)]" />
       </div>
+      <div className="absolute inset-0 grain-overlay opacity-20" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(79,209,255,0.14),transparent_24%)]" />
 
-      <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto">
-        {/* Logo */}
-        <div className="mb-6 md:mb-8">
-          <Image
-            src="/images/logo.png"
-            alt={barbershopData.name}
-            width={320}
-            height={320}
-            className="w-64 h-64 md:w-80 md:h-80 object-contain drop-shadow-2xl"
-            priority
-          />
+      <div className="relative z-10 mx-auto grid min-h-[calc(100vh-8rem)] max-w-7xl items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="max-w-2xl">
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-black/30 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-primary backdrop-blur-sm">
+            <Sparkles className="h-3.5 w-3.5" />
+            Reservas + IA
+          </div>
+
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-foreground/72">Software para barberias</p>
+
+          <h1 className="font-display text-5xl leading-[0.95] text-foreground sm:text-6xl md:text-7xl">
+            Reservas online con IA para barberias
+          </h1>
+
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/74 md:text-xl">
+            Mas reservas y una experiencia digital simple.
+          </p>
+
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <Link
+              href="#servicios"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 text-sm font-bold uppercase tracking-[0.15em] text-primary-foreground transition-transform hover:-translate-y-0.5"
+            >
+              Ver el producto
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href="#tecnologia"
+              className="inline-flex items-center justify-center rounded-full border border-primary/28 bg-black/28 px-7 py-4 text-sm font-bold uppercase tracking-[0.15em] text-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              Como funciona
+            </Link>
+          </div>
         </div>
 
-        {/* Tagline */}
-        <p className="text-[#4FD1FF] text-lg md:text-xl font-medium mb-4 tracking-wide">
-          {barbershopData.slogan}
-        </p>
+        <div className="relative self-center lg:justify-self-end">
+          <div className="noir-panel fx-float fx-glow relative overflow-hidden rounded-[2.4rem] p-4 md:p-5">
+            <div className="absolute inset-0 bg-[linear-gradient(145deg,rgba(79,209,255,0.14),transparent_45%)]" />
+            <div className="relative overflow-hidden rounded-[2rem] border border-primary/14">
+              <Image
+                src="/images/gallery/6.jpg"
+                alt="Experiencia premium de barberia"
+                width={900}
+                height={1200}
+                className="h-[32rem] w-full object-cover md:h-[40rem]"
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.08),rgba(0,0,0,0.72))]" />
+            </div>
 
-        {/* Description */}
-        <p className="text-foreground/70 text-base md:text-lg max-w-2xl mb-8 leading-relaxed">
-          {barbershopData.description}
-        </p>
+            <div className="absolute left-6 right-6 top-6 rounded-[1.6rem] border border-primary/18 bg-black/45 p-4 backdrop-blur-sm">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.22em] text-primary/90">Barber profile</p>
+                  <p className="mt-2 font-display text-3xl leading-none text-foreground">De la idea a la reserva</p>
+                </div>
+                <div className="rounded-full bg-primary px-3 py-1 text-xs font-bold uppercase tracking-[0.15em] text-primary-foreground">
+                  94% match
+                </div>
+              </div>
+            </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-          <Link
-            href={`https://wa.me/${barbershopData.contact.whatsapp}?text=Hola,%20me%20gustaría%20reservar%20una%20cita`}
-            target="_blank"
-            className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#4FD1FF] to-[#3BA6E8] text-[#071B3A] px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl hover:shadow-[#4FD1FF]/30 hover:scale-105 transition-all duration-300"
-          >
-            Reserva tu Cita
-          </Link>
-          <Link
-            href="#servicios"
-            className="flex items-center justify-center gap-2 border-2 border-[#4FD1FF] text-[#4FD1FF] px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#4FD1FF]/10 transition-all duration-300"
-          >
-            Ver Servicios
-          </Link>
+            <div className="absolute inset-x-6 bottom-6">
+              <div className="noir-panel fx-hover-lift rounded-[1.6rem] p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Producto para barberias</p>
+                <p className="mt-3 font-display text-3xl leading-none text-foreground">Agenda online + IA facial</p>
+                <p className="mt-3 text-sm leading-relaxed text-foreground/62"></p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <Link href="#servicios" aria-label="Scroll to services">
-          <ChevronDown className="w-8 h-8 text-[#4FD1FF]/60" />
+      <div className="relative z-10 mt-8 flex justify-center">
+        <Link
+          href="#servicios"
+          className="rounded-full border border-primary/20 bg-black/35 p-3 text-primary backdrop-blur-sm"
+          aria-label="Ver mas"
+        >
+          <ChevronDown className="h-5 w-5 animate-bounce" />
         </Link>
       </div>
     </section>
