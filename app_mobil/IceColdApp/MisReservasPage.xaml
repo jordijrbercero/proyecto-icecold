@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IceColdApp.MisReservasPage"
+             Title="Mis Reservas"
+             BackgroundColor="#0A0F1D">
+
+    <Grid Padding="20">
+
+        <Label x:Name="MensajeVacio" 
+               Text="No tienes ninguna reserva activa." 
+               TextColor="#A0AEC0" 
+               FontSize="16" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" 
+               IsVisible="False" />
+
+        <CollectionView x:Name="ListaMisReservas">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border BackgroundColor="#1E293B" StrokeThickness="0" Padding="15" Margin="0,0,0,15">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="12" />
+                        </Border.StrokeShape>
+                        <VerticalStackLayout Spacing="10">
+
+                            <Grid ColumnDefinitions="*, Auto">
+                                <VerticalStackLayout Grid.Column="0">
+                                    <Label Text="{Binding Servicio}" TextColor="White" FontSize="18" FontAttributes="Bold" />
+                                    <Label Text="{Binding Barbero, StringFormat='Con {0}'}" TextColor="#29B6F6" FontSize="14" />
+                                </VerticalStackLayout>
+                                <Label Grid.Column="1" Text="{Binding Precio}" TextColor="White" FontSize="18" FontAttributes="Bold" VerticalOptions="Start" />
+                            </Grid>
+
+                            <BoxView HeightRequest="1" Color="#0A0F1D" Margin="0,5" />
+
+                            <Grid ColumnDefinitions="*, *">
+                                <Label Grid.Column="0" Text="{Binding Dia, StringFormat='📅 {0}'}" TextColor="#A0AEC0" FontSize="14" />
+                                <Label Grid.Column="1" Text="{Binding Hora, StringFormat='⏰ {0}'}" TextColor="#A0AEC0" FontSize="14" HorizontalOptions="End" />
+                            </Grid>
+
+                            <Grid ColumnDefinitions="*, *" ColumnSpacing="10" Margin="0,10,0,0">
+                                <Button Grid.Column="0" Text="Ver Detalles" BackgroundColor="Transparent" TextColor="#29B6F6" 
+                                        BorderColor="#29B6F6" BorderWidth="1" CornerRadius="8" HeightRequest="40"
+                                        Clicked="OnVerClicked" CommandParameter="{Binding .}" />
+
+                                <Button Grid.Column="1" Text="Cancelar" BackgroundColor="#EF4444" TextColor="White" 
+                                        CornerRadius="8" HeightRequest="40"
+                                        Clicked="OnCancelarClicked" CommandParameter="{Binding .}" />
+                            </Grid>
+
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

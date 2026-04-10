@@ -9,7 +9,19 @@ public partial class MainPage : ContentPage
 
     private async void OnReservaClicked(object sender, EventArgs e)
     {
-        await DisplayAlert("Reserva", "¡Abriendo el calendario de reservas!", "OK");
+        await Shell.Current.GoToAsync(nameof(ReservaPage));
+    }
+
+    private async void OnMisReservasClicked(object sender, EventArgs e)
+    {
+        if (SesionGlobal.UsuarioActual == null)
+        {
+            await DisplayAlert("Atención", "Debes iniciar sesión para ver tus reservas.", "OK");
+
+            await Shell.Current.GoToAsync(nameof(LoginPage));
+            return;
+        }
+        await Shell.Current.GoToAsync(nameof(MisReservasPage));
     }
 
     private async void OnServiciosClicked(object sender, EventArgs e)
@@ -47,10 +59,6 @@ public partial class MainPage : ContentPage
         }
     }
 
-    private async void OnConocenosClicked(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync(nameof(ConocenosPage));
-    }
 
     private async void OnContactarClicked(object sender, EventArgs e)
     {
@@ -88,6 +96,8 @@ public partial class MainPage : ContentPage
 
             await Shell.Current.GoToAsync(nameof(PerfilPage));
     }
+
+    
 }
 
 

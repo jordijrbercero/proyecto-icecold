@@ -71,6 +71,16 @@
 
             <Border Style="{StaticResource BotonSimuladoStyle}">
                 <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnMisReservasClicked" />
+                </Border.GestureRecognizers>
+                <Grid ColumnDefinitions="Auto, *">
+                    <Image Grid.Column="0" Source="fotocalendario.png" Style="{StaticResource IconoStyle}" />
+                    <Label Grid.Column="1" Text="Mis Reservas" Style="{StaticResource TextoStyle}" />
+                </Grid>
+            </Border>
+
+            <Border Style="{StaticResource BotonSimuladoStyle}">
+                <Border.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnServiciosClicked" />
                 </Border.GestureRecognizers>
                 <Grid ColumnDefinitions="Auto, *">
@@ -99,15 +109,6 @@
                 </Grid>
             </Border>
 
-            <Border Style="{StaticResource BotonSimuladoStyle}">
-                <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnConocenosClicked" />
-                </Border.GestureRecognizers>
-                <Grid ColumnDefinitions="Auto, *">
-                    <Image Grid.Column="0" Source="fotoconocenos.png" Style="{StaticResource IconoStyle}" />
-                    <Label Grid.Column="1" Text="Conócenos" Style="{StaticResource TextoStyle}" />
-                </Grid>
-            </Border>
 
             <Border Style="{StaticResource BotonSimuladoStyle}">
                 <Border.GestureRecognizers>
@@ -118,6 +119,7 @@
                     <Label Grid.Column="1" Text="Contactar" Style="{StaticResource TextoStyle}" />
                 </Grid>
             </Border>
+            
 
         </VerticalStackLayout>
     </ScrollView>

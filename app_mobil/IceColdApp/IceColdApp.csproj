@@ -82,6 +82,12 @@
 	  <Compile Update="ContactarPage.xaml.cs">
 	    <DependentUpon>ContactarPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="MisReservasPage.xaml.cs">
+	    <DependentUpon>MisReservasPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="ReservaPage.xaml.cs">
+	    <DependentUpon>ReservaPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="ServiciosPage.xaml.cs">
 	    <DependentUpon>ServiciosPage.xaml</DependentUpon>
 	  </Compile>
@@ -101,6 +107,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ContactarPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MisReservasPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ReservaPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ServiciosPage.xaml">
