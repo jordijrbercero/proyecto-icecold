@@ -21,4 +21,10 @@ public class ReservaModel
     public string Hora { get; set; }
     public string Precio { get; set; }
     public DateTime FechaCreacion { get; set; }
+
+    public bool email_confirmacion_enviado { get; set; }
+    public bool recordatorio_enviado { get; set; }
+
+    public string fecha_confirmacion { get; set; }
+    public string fecha_recordatorio { get; set; }
 }

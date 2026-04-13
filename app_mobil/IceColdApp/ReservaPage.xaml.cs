@@ -320,6 +320,7 @@ public partial class ReservaPage : ContentPage
         try
         {
             await DisplayAlert("Procesando", "Estamos guardando tu cita...", "OK");
+            string fechaAhora = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
             var nuevaReserva = new ReservaModel
             {
@@ -331,7 +332,12 @@ public partial class ReservaPage : ContentPage
                 Dia = diaSeleccionado.FechaCompleta.ToString("dd/MM/yyyy"),
                 Hora = horaSeleccionada.Hora,
                 Precio = ResumenPrecio.Text,
-                FechaCreacion = DateTime.Now
+                FechaCreacion = DateTime.Now,
+
+                email_confirmacion_enviado = false,
+                recordatorio_enviado = false,
+                fecha_confirmacion = fechaAhora,
+                fecha_recordatorio = fechaAhora
             };
 
             await coleccionReservas.InsertOneAsync(nuevaReserva);

@@ -15,6 +15,10 @@
       "RelativeMoniker": "D:0:0:{5FE6AF72-3727-4101-A944-87349C32E3B1}|IceColdApp\\IceColdApp.csproj|solutionrelative:icecoldapp\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5FE6AF72-3727-4101-A944-87349C32E3B1}|IceColdApp\\IceColdApp.csproj|c:\\users\\alumno\\documents\\github\\proyecto-icecold\\app_mobil\\icecoldapp\\serviciospage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FE6AF72-3727-4101-A944-87349C32E3B1}|IceColdApp\\IceColdApp.csproj|solutionrelative:icecoldapp\\serviciospage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5FE6AF72-3727-4101-A944-87349C32E3B1}|IceColdApp\\IceColdApp.csproj|c:\\users\\alumno\\documents\\github\\proyecto-icecold\\app_mobil\\icecoldapp\\reservapage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5FE6AF72-3727-4101-A944-87349C32E3B1}|IceColdApp\\IceColdApp.csproj|solutionrelative:icecoldapp\\reservapage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -57,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5FE6AF72-3727-4101-A944-87349C32E3B1}|IceColdApp\\IceColdApp.csproj|c:\\users\\alumno\\documents\\github\\proyecto-icecold\\app_mobil\\icecoldapp\\conocenospage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FE6AF72-3727-4101-A944-87349C32E3B1}|IceColdApp\\IceColdApp.csproj|solutionrelative:icecoldapp\\conocenospage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FE6AF72-3727-4101-A944-87349C32E3B1}|IceColdApp\\IceColdApp.csproj|c:\\users\\alumno\\documents\\github\\proyecto-icecold\\app_mobil\\icecoldapp\\serviciospage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FE6AF72-3727-4101-A944-87349C32E3B1}|IceColdApp\\IceColdApp.csproj|solutionrelative:icecoldapp\\serviciospage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5FE6AF72-3727-4101-A944-87349C32E3B1}|IceColdApp\\IceColdApp.csproj|c:\\users\\alumno\\documents\\github\\proyecto-icecold\\app_mobil\\icecoldapp\\conocenospage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -118,41 +118,40 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoginPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\LoginPage.xaml.cs",
-              "RelativeDocumentMoniker": "IceColdApp\\LoginPage.xaml.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\LoginPage.xaml.cs",
-              "RelativeToolTip": "IceColdApp\\LoginPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "IceColdApp\\AppShell.xaml.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\AppShell.xaml.cs",
+              "RelativeToolTip": "IceColdApp\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T08:18:54.118Z",
+              "WhenOpened": "2026-03-24T08:24:23.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReservaModel.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\ReservaModel.cs",
+              "RelativeDocumentMoniker": "IceColdApp\\ReservaModel.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\ReservaModel.cs",
+              "RelativeToolTip": "IceColdApp\\ReservaModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T08:20:53.882Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MisReservasPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\MisReservasPage.xaml",
-              "RelativeDocumentMoniker": "IceColdApp\\MisReservasPage.xaml",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\MisReservasPage.xaml",
-              "RelativeToolTip": "IceColdApp\\MisReservasPage.xaml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAcwDAAAABlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-10T08:30:04.503Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\MainPage.xaml",
-              "RelativeDocumentMoniker": "IceColdApp\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\MainPage.xaml",
-              "RelativeToolTip": "IceColdApp\\MainPage.xaml",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAcwG4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-24T08:25:18.963Z",
+              "DocumentIndex": 3,
+              "Title": "ServiciosPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\ServiciosPage.xaml.cs",
+              "RelativeDocumentMoniker": "IceColdApp\\ServiciosPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\ServiciosPage.xaml.cs",
+              "RelativeToolTip": "IceColdApp\\ServiciosPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T07:46:20.035Z",
               "EditorCaption": ""
             },
             {
@@ -163,10 +162,35 @@
               "RelativeDocumentMoniker": "IceColdApp\\ReservaPage.xaml.cs",
               "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\ReservaPage.xaml.cs",
               "RelativeToolTip": "IceColdApp\\ReservaPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALcAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAADIBAAAAAAAAAAAqwEIBAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-10T08:04:30.876Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\RegisterPage.xaml.cs",
+              "RelativeDocumentMoniker": "IceColdApp\\RegisterPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\RegisterPage.xaml.cs",
+              "RelativeToolTip": "IceColdApp\\RegisterPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T08:50:34.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReservaPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\ReservaPage.xaml",
+              "RelativeDocumentMoniker": "IceColdApp\\ReservaPage.xaml",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\ReservaPage.xaml",
+              "RelativeToolTip": "IceColdApp\\ReservaPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-10T08:03:49.018Z"
             },
             {
               "$type": "Document",
@@ -178,51 +202,11 @@
               "RelativeToolTip": "IceColdApp\\ConocenosPage.xaml",
               "ViewState": "AgIAABgAAAAAAAAAAAAAACAAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-07T09:53:11.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T09:53:11.508Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ReservaPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\ReservaPage.xaml",
-              "RelativeDocumentMoniker": "IceColdApp\\ReservaPage.xaml",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\ReservaPage.xaml",
-              "RelativeToolTip": "IceColdApp\\ReservaPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAABnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-10T08:03:49.018Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AppShell.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\AppShell.xaml.cs",
-              "RelativeDocumentMoniker": "IceColdApp\\AppShell.xaml.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\AppShell.xaml.cs",
-              "RelativeToolTip": "IceColdApp\\AppShell.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T08:24:23.44Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReservaModel.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\ReservaModel.cs",
-              "RelativeDocumentMoniker": "IceColdApp\\ReservaModel.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\ReservaModel.cs",
-              "RelativeToolTip": "IceColdApp\\ReservaModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T08:20:53.882Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ContactarPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\ContactarPage.xaml.cs",
               "RelativeDocumentMoniker": "IceColdApp\\ContactarPage.xaml.cs",
@@ -234,20 +218,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RegisterPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\RegisterPage.xaml.cs",
-              "RelativeDocumentMoniker": "IceColdApp\\RegisterPage.xaml.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\RegisterPage.xaml.cs",
-              "RelativeToolTip": "IceColdApp\\RegisterPage.xaml.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T08:50:34.467Z",
-              "EditorCaption": ""
+              "DocumentIndex": 5,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\MainPage.xaml",
+              "RelativeDocumentMoniker": "IceColdApp\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\MainPage.xaml",
+              "RelativeToolTip": "IceColdApp\\MainPage.xaml",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAcwG4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-24T08:25:18.963Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
+              "Title": "MisReservasPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\MisReservasPage.xaml",
+              "RelativeDocumentMoniker": "IceColdApp\\MisReservasPage.xaml",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\MisReservasPage.xaml",
+              "RelativeToolTip": "IceColdApp\\MisReservasPage.xaml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAcwDAAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-10T08:30:04.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "IceColdApp\\LoginPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\LoginPage.xaml.cs",
+              "RelativeToolTip": "IceColdApp\\LoginPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-24T08:18:54.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "IceColdApp\\MainPage.xaml.cs",
@@ -255,12 +262,11 @@
               "RelativeToolTip": "IceColdApp\\MainPage.xaml.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAcwDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T08:28:31.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T08:28:31.495Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "MisReservasPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\MisReservasPage.xaml.cs",
               "RelativeDocumentMoniker": "IceColdApp\\MisReservasPage.xaml.cs",
@@ -268,12 +274,11 @@
               "RelativeToolTip": "IceColdApp\\MisReservasPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T08:30:27.08Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-10T08:30:27.08Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ContactarPage.xaml",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\ContactarPage.xaml",
               "RelativeDocumentMoniker": "IceColdApp\\ContactarPage.xaml",
@@ -285,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\AppShell.xaml",
               "RelativeDocumentMoniker": "IceColdApp\\AppShell.xaml",
@@ -293,12 +298,11 @@
               "RelativeToolTip": "IceColdApp\\AppShell.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-10T08:08:57.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-10T08:08:57.715Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ConocenosPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\ConocenosPage.xaml.cs",
               "RelativeDocumentMoniker": "IceColdApp\\ConocenosPage.xaml.cs",
@@ -357,18 +361,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ServiciosPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\ServiciosPage.xaml.cs",
-              "RelativeDocumentMoniker": "IceColdApp\\ServiciosPage.xaml.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\ServiciosPage.xaml.cs",
-              "RelativeToolTip": "IceColdApp\\ServiciosPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T07:46:20.035Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 16,
               "Title": "ServiciosPage.xaml",
               "DocumentMoniker": "C:\\Users\\Alumno\\Documents\\GitHub\\proyecto-icecold\\app_mobil\\IceColdApp\\ServiciosPage.xaml",
@@ -377,8 +369,7 @@
               "RelativeToolTip": "IceColdApp\\ServiciosPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-07T07:45:56.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-07T07:45:56.555Z"
             },
             {
               "$type": "Document",
@@ -390,8 +381,7 @@
               "RelativeToolTip": "IceColdApp\\RegisterPage.xaml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-24T08:47:25.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T08:47:25.495Z"
             },
             {
               "$type": "Document",
@@ -427,8 +417,7 @@
               "RelativeToolTip": "IceColdApp\\PerfilPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-24T10:41:33.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T10:41:33.109Z"
             },
             {
               "$type": "Document",
@@ -440,8 +429,7 @@
               "RelativeToolTip": "IceColdApp\\LoginPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-24T08:18:41.192Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T08:18:41.192Z"
             }
           ]
         }

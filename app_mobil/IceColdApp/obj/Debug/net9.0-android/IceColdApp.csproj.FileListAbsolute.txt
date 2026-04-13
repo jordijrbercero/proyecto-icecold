@@ -1346,6 +1346,17 @@ D:\miquel DAM2\AAAProyecto ICECOLD\IceColdApp\IceColdApp\obj\Debug\net9.0-androi
 D:\miquel DAM2\AAAProyecto ICECOLD\IceColdApp\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable\fotolupa.png
 D:\miquel DAM2\AAAProyecto ICECOLD\IceColdApp\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable\fototijeras.png
 D:\miquel DAM2\AAAProyecto ICECOLD\IceColdApp\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable\fotoweb.png
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\IceColdApp.runtimeconfig.json
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\IceColdApp.dll
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\IceColdApp.pdb
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\com.companyname.icecoldapp.apk
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\com.companyname.icecoldapp.aab
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\com.companyname.icecoldapp-Signed.aab
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\com.companyname.icecoldapp-Signed.apk
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\com.companyname.icecoldapp-Signed.apk.idsig
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\Microsoft.Maui.Controls.HotReload.Forms.dll
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\Microsoft.VisualStudio.DesignTools.TapContract.dll
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\build.props
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\adb.props
@@ -1367,14 +1378,14 @@ C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\f\FluentUI.cs
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\f\OpenSans-Regular.ttf
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\f\OpenSans-Semibold.ttf
-C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable\fotolupa.png
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable\ic_usuario.png
-C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable\logo_barberia.png
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable\fototijeras.png
-C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable\fotocalendario.png
-C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable\fotoconocenos.png
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable\logo_barberia.png
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable\fotoweb.png
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable\fotocontacto.png
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable\fotocalendario.png
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable\fotoconocenos.png
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable\fotolupa.png
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable-xxxhdpi\dotnet_bot.png
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable-xxhdpi\dotnet_bot.png
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable-xhdpi\dotnet_bot.png
@@ -1473,21 +1484,10 @@ C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\IceColdApp.AssemblyInfo.cs
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\IceColdApp.csproj.CoreCompileInputs.cache
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\IceColdApp.sourcelink.json
-C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\IceColdApp.dll
-C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\IceColdApp.pdb
-C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\IceColdApp.runtimeconfig.json
-C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\IceColdApp.dll
-C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\IceColdApp.pdb
-C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\com.companyname.icecoldapp.apk
-C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\com.companyname.icecoldapp.aab
-C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\com.companyname.icecoldapp-Signed.aab
-C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\com.companyname.icecoldapp-Signed.apk
-C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\com.companyname.icecoldapp-Signed.apk.idsig
-C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\Microsoft.Maui.Controls.HotReload.Forms.dll
-C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
-C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\bin\Debug\net9.0-android\Microsoft.VisualStudio.DesignTools.TapContract.dll
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\XamlC.stamp
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\IceColdApp.csproj.Up2Date
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\IceColdApp.dll
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\IceColdApp.pdb
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\IceColdApp.genruntimeconfig.cache
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\IceColdApp.runtimeconfig.json.bin
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\android\bin\com.companyname.icecoldapp.apk
