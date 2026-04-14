@@ -2707,3 +2707,6 @@ C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable\barbero1.png
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable\barbero2.png
+C:\Users\Alumno\Documents\GitHub\proyecto-icecold\app_mobil\IceColdApp\obj\Debug\net9.0-android\resizetizer\r\drawable\barbero3.jpg

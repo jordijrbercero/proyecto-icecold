@@ -30,7 +30,12 @@
                                 <VerticalStackLayout Spacing="5" HorizontalOptions="Center" WidthRequest="70">
                                     <Border HeightRequest="60" WidthRequest="60" StrokeShape="RoundRectangle 30" 
                                             BackgroundColor="{Binding FondoColor}" Stroke="{Binding BordeColor}" StrokeThickness="2">
-                                        <Image Source="{Binding Imagen}" Aspect="AspectFill" Margin="10" />
+
+                                        <Image Source="{Binding Imagen}" Aspect="AspectFill" Margin="2">
+                                            <Image.Clip>
+                                                <EllipseGeometry RadiusX="28" RadiusY="28" Center="28,28" />
+                                            </Image.Clip>
+                                        </Image>
 
                                         <Border.GestureRecognizers>
                                             <TapGestureRecognizer Tapped="OnBarberoTapped" />

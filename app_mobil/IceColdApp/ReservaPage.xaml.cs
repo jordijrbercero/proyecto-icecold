@@ -110,10 +110,10 @@ public partial class ReservaPage : ContentPage
 
         todosBarberos = new List<Barbero>
         {
-            new Barbero { Nombre = "Cualquiera", Imagen = "ic_usuario.png", IsSelected = true },
-            new Barbero { Nombre = "Angelo", Imagen = "ic_usuario.png" },
-            new Barbero { Nombre = "Cristian", Imagen = "ic_usuario.png" },
-            new Barbero { Nombre = "David", Imagen = "ic_usuario.png" }
+            new Barbero { Nombre = "Cualquiera", Imagen = "logo_barberia.png", IsSelected = true },
+            new Barbero { Nombre = "Angelo", Imagen = "barbero1.png" },
+            new Barbero { Nombre = "Cristina", Imagen = "barbero2.png" },
+            new Barbero { Nombre = "David", Imagen = "barbero3.jpg" }
         };
         barberoSeleccionado = todosBarberos[0];
         BindableLayout.SetItemsSource(ListaBarberos, todosBarberos);
@@ -199,7 +199,7 @@ public partial class ReservaPage : ContentPage
     {
         if (barberoSeleccionado == null || diaSeleccionado == null)
         {
-            BindableLayout.SetItemsSource(ListaHoras, new List<HoraReserva>()); // Vaciamos si no hay día
+            BindableLayout.SetItemsSource(ListaHoras, new List<HoraReserva>()); 
             return;
         }
 
@@ -215,7 +215,7 @@ public partial class ReservaPage : ContentPage
 
         try
         {
-            // Ahora la fecha se guarda en formato exacto: "10/04/2026"
+            
             string diaFormateado = diaSeleccionado.FechaCompleta.ToString("dd/MM/yyyy");
 
             var filtro = Builders<ReservaModel>.Filter.And(
@@ -328,7 +328,7 @@ public partial class ReservaPage : ContentPage
                 ClienteEmail = SesionGlobal.UsuarioActual.Email,
                 Servicio = servicioSeleccionado,
                 Barbero = barberoSeleccionado.Nombre,
-                // Ahora usamos la fecha real formateada (Ej: 10/04/2026)
+                
                 Dia = diaSeleccionado.FechaCompleta.ToString("dd/MM/yyyy"),
                 Hora = horaSeleccionada.Hora,
                 Precio = ResumenPrecio.Text,
