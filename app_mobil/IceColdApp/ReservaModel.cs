@@ -25,6 +25,5 @@ public class ReservaModel
     public bool email_confirmacion_enviado { get; set; }
     public bool recordatorio_enviado { get; set; }
 
-    public string fecha_confirmacion { get; set; }
-    public string fecha_recordatorio { get; set; }
+
 }
