@@ -36,6 +36,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = IceColdApp.ConocenosPage.x
 build_metadata.AdditionalFiles.TargetPath = ConocenosPage.xaml
 build_metadata.AdditionalFiles.RelativePath = ConocenosPage.xaml
 
+[C:/Users/Alumno/Documents/GitHub/proyecto-icecold/app_mobil/IceColdApp/ContactarPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = IceColdApp.ContactarPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ContactarPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ContactarPage.xaml
+
 [C:/Users/Alumno/Documents/GitHub/proyecto-icecold/app_mobil/IceColdApp/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = IceColdApp.LoginPage.xaml
@@ -48,6 +54,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = IceColdApp.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
+[C:/Users/Alumno/Documents/GitHub/proyecto-icecold/app_mobil/IceColdApp/MisReservasPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = IceColdApp.MisReservasPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MisReservasPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MisReservasPage.xaml
+
 [C:/Users/Alumno/Documents/GitHub/proyecto-icecold/app_mobil/IceColdApp/PerfilPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = IceColdApp.PerfilPage.xaml
@@ -59,6 +71,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = IceColdApp.RegisterPage.xaml
 build_metadata.AdditionalFiles.TargetPath = RegisterPage.xaml
 build_metadata.AdditionalFiles.RelativePath = RegisterPage.xaml
+
+[C:/Users/Alumno/Documents/GitHub/proyecto-icecold/app_mobil/IceColdApp/ReservaPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = IceColdApp.ReservaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ReservaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ReservaPage.xaml
 
 [C:/Users/Alumno/Documents/GitHub/proyecto-icecold/app_mobil/IceColdApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

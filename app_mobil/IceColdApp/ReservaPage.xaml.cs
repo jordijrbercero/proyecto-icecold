@@ -108,7 +108,7 @@ public partial class ReservaPage : ContentPage
 
         todosBarberos = new List<Barbero>
         {
-            new Barbero { Nombre = "Cualquiera", Imagen = "logo_barberia.png", IsSelected = true },
+            new Barbero { Nombre = "Cualquiera", Imagen = "cualquiera.png", IsSelected = true },
             new Barbero { Nombre = "Angelo", Imagen = "barbero1.png" },
             new Barbero { Nombre = "Cristina", Imagen = "barbero2.png" },
             new Barbero { Nombre = "David", Imagen = "barbero3.jpg" }

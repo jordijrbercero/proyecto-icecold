@@ -33,21 +33,20 @@
     </ContentPage.Resources>
 
     <ScrollView>
-        <VerticalStackLayout Padding="20">
-
+        <VerticalStackLayout Padding="5, 20, 20, 20">
             <ImageButton 
-                 x:Name="BotonPerfil"
-                 Source="ic_usuario.png" 
-                 HeightRequest="75"
-                 WidthRequest="75"
-                 Aspect="AspectFill"
-                 HorizontalOptions="Start"
-                 VerticalOptions="Center"
-                 Margin="10, 10, 0, 20"
-                 BackgroundColor="Transparent"
-                 Clicked="OnPerfilClicked">
+                x:Name="BotonPerfil"
+                Source="ic_usuario.png" 
+                HeightRequest="120"
+                WidthRequest="120"
+                Aspect="AspectFill"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                Margin="0, 10, 0, 20"
+                BackgroundColor="Transparent"
+                Clicked="OnPerfilClicked">
                 <ImageButton.Clip>
-                    <EllipseGeometry RadiusX="37.5" RadiusY="37.5" Center="37.5,37.5" />
+                    <EllipseGeometry RadiusX="60" RadiusY="60" Center="60,60" />
                 </ImageButton.Clip>
             </ImageButton>
 
