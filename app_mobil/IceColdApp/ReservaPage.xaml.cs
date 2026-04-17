@@ -1,8 +1,7 @@
 using MongoDB.Driver;
-using System.Globalization; 
+using System.Globalization;
 
 namespace IceColdApp;
-
 
 public class Barbero : BindableObject
 {
@@ -20,8 +19,8 @@ public class Barbero : BindableObject
             OnPropertyChanged(nameof(FondoColor));
         }
     }
-    public string BordeColor => IsSelected ? "#29B6F6" : "Transparent";
-    public string FondoColor => IsSelected ? "#121A2F" : "#1E293B";
+    public Color BordeColor => IsSelected ? Color.FromArgb("#29B6F6") : Colors.Transparent;
+    public Color FondoColor => IsSelected ? Color.FromArgb("#121A2F") : Color.FromArgb("#1E293B");
 }
 
 public class DiaCalendario : BindableObject
@@ -30,7 +29,7 @@ public class DiaCalendario : BindableObject
     public string Numero { get; set; }
     public bool IsEnabled { get; set; }
     public string NivelDisponibilidad { get; set; }
-    public DateTime FechaCompleta { get; set; } 
+    public DateTime FechaCompleta { get; set; }
 
     public bool IsSelected
     {
@@ -45,10 +44,10 @@ public class DiaCalendario : BindableObject
         }
     }
 
-    public string TextoColor => !IsEnabled ? "#4A5568" : "White"; 
-    public string BordeColor => IsSelected ? "#29B6F6" : "Transparent";
-    public string FondoColor => IsSelected ? "#29B6F6" : "Transparent";
-    public string PuntoColor => NivelDisponibilidad == "Alta" ? "#4ADE80" : (NivelDisponibilidad == "Media" ? "#FBBF24" : "Transparent");
+    public Color TextoColor => !IsEnabled ? Color.FromArgb("#4A5568") : Colors.White;
+    public Color BordeColor => IsSelected ? Color.FromArgb("#29B6F6") : Colors.Transparent;
+    public Color FondoColor => IsSelected ? Color.FromArgb("#29B6F6") : Colors.Transparent;
+    public Color PuntoColor => NivelDisponibilidad == "Alta" ? Color.FromArgb("#4ADE80") : (NivelDisponibilidad == "Media" ? Color.FromArgb("#FBBF24") : Colors.Transparent);
 }
 
 public class HoraReserva : BindableObject
@@ -66,8 +65,8 @@ public class HoraReserva : BindableObject
             OnPropertyChanged(nameof(FondoColor));
         }
     }
-    public string BordeColor => IsSelected ? "#29B6F6" : "Transparent";
-    public string FondoColor => IsSelected ? "#121A2F" : "#1E293B";
+    public Color BordeColor => IsSelected ? Color.FromArgb("#29B6F6") : Colors.Transparent;
+    public Color FondoColor => IsSelected ? Color.FromArgb("#121A2F") : Color.FromArgb("#1E293B");
 }
 
 public partial class ReservaPage : ContentPage
@@ -84,7 +83,6 @@ public partial class ReservaPage : ContentPage
     private HoraReserva horaSeleccionada;
     private string servicioSeleccionado;
 
-    
     private DateTime mesVisualizado;
 
     public ReservaPage()
@@ -118,19 +116,16 @@ public partial class ReservaPage : ContentPage
         barberoSeleccionado = todosBarberos[0];
         BindableLayout.SetItemsSource(ListaBarberos, todosBarberos);
 
-        
         mesVisualizado = DateTime.Today;
         GenerarCalendario(mesVisualizado);
 
         _ = ActualizarHorasDisponibles();
     }
 
-    
     private void GenerarCalendario(DateTime fechaMes)
     {
         todosDias = new List<DiaCalendario>();
 
-        
         CultureInfo culturaEspañol = new CultureInfo("es-ES");
         string nombreMes = fechaMes.ToString("MMMM yyyy", culturaEspañol);
         MesAnioLabel.Text = char.ToUpper(nombreMes[0]) + nombreMes.Substring(1);
@@ -138,22 +133,18 @@ public partial class ReservaPage : ContentPage
         DateTime primerDiaDelMes = new DateTime(fechaMes.Year, fechaMes.Month, 1);
         int diasEnMes = DateTime.DaysInMonth(fechaMes.Year, fechaMes.Month);
 
-        
         int offset = (int)primerDiaDelMes.DayOfWeek - 1;
-        if (offset < 0) offset = 6; 
+        if (offset < 0) offset = 6;
 
-        
         for (int i = 0; i < offset; i++)
         {
             todosDias.Add(new DiaCalendario { Numero = "", IsEnabled = false });
         }
 
-       
         for (int i = 1; i <= diasEnMes; i++)
         {
             DateTime fechaIteracion = new DateTime(fechaMes.Year, fechaMes.Month, i);
 
-            
             bool esPasado = fechaIteracion.Date < DateTime.Today;
             bool esDomingo = fechaIteracion.DayOfWeek == DayOfWeek.Sunday;
 
@@ -171,17 +162,15 @@ public partial class ReservaPage : ContentPage
         BindableLayout.SetItemsSource(ContenedorDias, todosDias);
     }
 
-    
     private async void OnMesAnteriorTapped(object sender, TappedEventArgs e)
     {
-        
         if (mesVisualizado.Year == DateTime.Today.Year && mesVisualizado.Month == DateTime.Today.Month)
             return;
 
         mesVisualizado = mesVisualizado.AddMonths(-1);
         GenerarCalendario(mesVisualizado);
 
-        diaSeleccionado = null; 
+        diaSeleccionado = null;
         await ActualizarHorasDisponibles();
     }
 
@@ -194,12 +183,11 @@ public partial class ReservaPage : ContentPage
         await ActualizarHorasDisponibles();
     }
 
-
     private async Task ActualizarHorasDisponibles()
     {
         if (barberoSeleccionado == null || diaSeleccionado == null)
         {
-            BindableLayout.SetItemsSource(ListaHoras, new List<HoraReserva>()); 
+            BindableLayout.SetItemsSource(ListaHoras, new List<HoraReserva>());
             return;
         }
 
@@ -215,7 +203,6 @@ public partial class ReservaPage : ContentPage
 
         try
         {
-            
             string diaFormateado = diaSeleccionado.FechaCompleta.ToString("dd/MM/yyyy");
 
             var filtro = Builders<ReservaModel>.Filter.And(
@@ -320,7 +307,6 @@ public partial class ReservaPage : ContentPage
         try
         {
             await DisplayAlert("Procesando", "Estamos guardando tu cita...", "OK");
-            
 
             var nuevaReserva = new ReservaModel
             {
@@ -328,15 +314,12 @@ public partial class ReservaPage : ContentPage
                 ClienteEmail = SesionGlobal.UsuarioActual.Email,
                 Servicio = servicioSeleccionado,
                 Barbero = barberoSeleccionado.Nombre,
-                
                 Dia = diaSeleccionado.FechaCompleta.ToString("dd/MM/yyyy"),
                 Hora = horaSeleccionada.Hora,
                 Precio = ResumenPrecio.Text,
                 FechaCreacion = DateTime.Now,
-
                 email_confirmacion_enviado = false,
                 recordatorio_enviado = false
-               
             };
 
             await coleccionReservas.InsertOneAsync(nuevaReserva);

@@ -81,17 +81,19 @@
                 <FlexLayout x:Name="ContenedorDias" Wrap="Wrap" Direction="Row" JustifyContent="Start">
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
-                            <VerticalStackLayout WidthRequest="48" HeightRequest="60" Spacing="2" HorizontalOptions="Center" Margin="0,5">
-                                <Border HeightRequest="40" WidthRequest="40" StrokeShape="RoundRectangle 20" 
-                                        BackgroundColor="{Binding FondoColor}" Stroke="{Binding BordeColor}" StrokeThickness="2" HorizontalOptions="Center">
-                                    <Label Text="{Binding Numero}" TextColor="{Binding TextoColor}" FontSize="16" HorizontalOptions="Center" VerticalOptions="Center" />
+                            <ContentView FlexLayout.Basis="14.28%">
+                                <VerticalStackLayout HeightRequest="60" Spacing="2" HorizontalOptions="Center" Margin="0,5">
+                                    <Border HeightRequest="40" WidthRequest="40" StrokeShape="RoundRectangle 20" 
+                                            BackgroundColor="{Binding FondoColor}" Stroke="{Binding BordeColor}" StrokeThickness="2" HorizontalOptions="Center">
+                                        <Label Text="{Binding Numero}" TextColor="{Binding TextoColor}" FontSize="16" HorizontalOptions="Center" VerticalOptions="Center" />
 
-                                    <Border.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnDiaTapped" />
-                                    </Border.GestureRecognizers>
-                                </Border>
-                                <BoxView HeightRequest="4" WidthRequest="12" CornerRadius="2" Color="{Binding PuntoColor}" HorizontalOptions="Center" />
-                            </VerticalStackLayout>
+                                        <Border.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnDiaTapped" />
+                                        </Border.GestureRecognizers>
+                                    </Border>
+                                    <BoxView HeightRequest="4" WidthRequest="12" CornerRadius="2" Color="{Binding PuntoColor}" HorizontalOptions="Center" />
+                                </VerticalStackLayout>
+                            </ContentView>
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
                 </FlexLayout>
