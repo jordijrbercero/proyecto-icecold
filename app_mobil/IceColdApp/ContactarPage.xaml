@@ -15,7 +15,7 @@
                    HorizontalOptions="Center" 
                    Margin="0,10,0,20" />
 
-            <Border BackgroundColor="#1E293B" StrokeThickness="0" Padding="15">
+            <Border BackgroundColor="#1E293B" Stroke="#2196F3" StrokeThickness="2" Padding="15">
                 <Border.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnTelefonoTapped" />
                 </Border.GestureRecognizers>
@@ -31,7 +31,7 @@
                 </Grid>
             </Border>
 
-            <Border BackgroundColor="#1E293B" StrokeThickness="0" Padding="15">
+            <Border BackgroundColor="#1E293B" Stroke="#2196F3" StrokeThickness="2" Padding="15">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="12" />
                 </Border.StrokeShape>
@@ -44,7 +44,7 @@
                 </Grid>
             </Border>
 
-            <Border BackgroundColor="#1E293B" StrokeThickness="0" Padding="15">
+            <Border BackgroundColor="#1E293B" Stroke="#2196F3" StrokeThickness="2" Padding="15">
                 <Border.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnInstagramTapped" />
                 </Border.GestureRecognizers>
@@ -60,7 +60,7 @@
                 </Grid>
             </Border>
 
-            <Border BackgroundColor="#1E293B" StrokeThickness="0" Padding="15">
+            <Border BackgroundColor="#1E293B" Stroke="#2196F3" StrokeThickness="2" Padding="15">
                 <Border.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnCorreoTapped" />
                 </Border.GestureRecognizers>
