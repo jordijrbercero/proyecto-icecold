@@ -35,29 +35,27 @@
     <ScrollView>
         <VerticalStackLayout Padding="20">
 
-            <Border 
-                HorizontalOptions="Start"
-                VerticalOptions="Center"
-                HeightRequest="60" 
-                WidthRequest="60"
-                Margin="10, 10, 0, 10"
-                Stroke="Transparent" 
-                StrokeThickness="0"
-                BackgroundColor="Transparent">  
-
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="30"/>
-                </Border.StrokeShape>
-
-                <ImageButton x:Name="BotonPerfil"
+            <ImageButton 
+                 x:Name="BotonPerfil"
                  Source="ic_usuario.png" 
+                 HeightRequest="75"
+                 WidthRequest="75"
+                 Aspect="AspectFill"
+                 HorizontalOptions="Start"
+                 VerticalOptions="Center"
+                 Margin="10, 10, 0, 20"
                  BackgroundColor="Transparent"
-                 Clicked="OnPerfilClicked"/>
-            </Border>
+                 Clicked="OnPerfilClicked">
+                <ImageButton.Clip>
+                    <EllipseGeometry RadiusX="37.5" RadiusY="37.5" Center="37.5,37.5" />
+                </ImageButton.Clip>
+            </ImageButton>
 
             <Image Source="logo_barberia.png" 
-                   HeightRequest="180" HorizontalOptions="Center" 
-                   Margin="0,0,0,30" Aspect="AspectFit" />
+                   HeightRequest="180" 
+                   HorizontalOptions="Center" 
+                   Margin="0,0,0,30" 
+                   Aspect="AspectFit" />
 
             <Border Style="{StaticResource BotonSimuladoStyle}">
                 <Border.GestureRecognizers>
@@ -109,7 +107,6 @@
                 </Grid>
             </Border>
 
-
             <Border Style="{StaticResource BotonSimuladoStyle}">
                 <Border.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnContactarClicked" />
@@ -119,7 +116,6 @@
                     <Label Grid.Column="1" Text="Contactar" Style="{StaticResource TextoStyle}" />
                 </Grid>
             </Border>
-            
 
         </VerticalStackLayout>
     </ScrollView>
