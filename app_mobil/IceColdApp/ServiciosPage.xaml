@@ -10,65 +10,84 @@
 
             <Label Text="Servicios más populares" TextColor="White" FontSize="18" FontAttributes="Bold" Margin="0,0,0,15" />
 
-            <Grid ColumnDefinitions="*, Auto" Padding="0,15,0,15">
-                <VerticalStackLayout Grid.Column="0" Margin="0,0,15,0">
-                    <Label Text="CORTE + LAVADO" TextColor="White" FontSize="16" />
-                    <Label Text="El servicio consta de corte según la preferencia del cliente, con la..." TextColor="#A0AEC0" FontSize="13" Margin="0,5,0,0" LineBreakMode="TailTruncation" MaxLines="2" />
-                </VerticalStackLayout>
-                <VerticalStackLayout Grid.Column="1" HorizontalOptions="End" VerticalOptions="Start">
-                    <Label Text="16,00 €" TextColor="White" FontSize="16" FontAttributes="Bold" HorizontalOptions="End" />
-                    <Label Text="40 min" TextColor="#A0AEC0" FontSize="13" HorizontalOptions="End" />
-                </VerticalStackLayout>
-            </Grid>
-            <BoxView HeightRequest="1" Color="#1E293B" />
-
-            <Grid ColumnDefinitions="*, Auto" Padding="0,15,0,15">
-                <VerticalStackLayout Grid.Column="0" Margin="0,0,15,0">
-                    <Label Text="CORTE &amp; ARREGLO DE BARBA" TextColor="White" FontSize="16" />
-                    <Label Text="El servicio mas completo, consta de Corte y arreglo de barba (o..." TextColor="#A0AEC0" FontSize="13" Margin="0,5,0,0" LineBreakMode="TailTruncation" MaxLines="2" />
-                </VerticalStackLayout>
-                <VerticalStackLayout Grid.Column="1" HorizontalOptions="End" VerticalOptions="Start">
-                    <Label Text="23,00 €" TextColor="White" FontSize="16" FontAttributes="Bold" HorizontalOptions="End" />
-                    <Label Text="1 h" TextColor="#A0AEC0" FontSize="13" HorizontalOptions="End" />
-                </VerticalStackLayout>
-            </Grid>
-            <BoxView HeightRequest="1" Color="#1E293B" />
-
-            <Grid ColumnDefinitions="*, Auto" Padding="0,15,0,15" Margin="0,0,0,20">
-                <VerticalStackLayout Grid.Column="0" Margin="0,0,15,0">
-                    <Label Text="CORTE NIÑO" TextColor="White" FontSize="16" />
-                    <Label Text="Servicio para los peques, corte a preferencia con peinado (-11 añ..." TextColor="#A0AEC0" FontSize="13" Margin="0,5,0,0" LineBreakMode="TailTruncation" MaxLines="2" />
-                </VerticalStackLayout>
-                <VerticalStackLayout Grid.Column="1" HorizontalOptions="End" VerticalOptions="Start">
-                    <Label Text="15,00 €" TextColor="White" FontSize="16" FontAttributes="Bold" HorizontalOptions="End" />
-                    <Label Text="40 min" TextColor="#A0AEC0" FontSize="13" HorizontalOptions="End" />
-                </VerticalStackLayout>
-            </Grid>
+            <Border Stroke="#2196F3" StrokeThickness="2" BackgroundColor="Transparent" Padding="15" Margin="0,0,0,15">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12" />
+                </Border.StrokeShape>
+                <Grid ColumnDefinitions="*, Auto">
+                    <VerticalStackLayout Grid.Column="0" Margin="0,0,15,0">
+                        <Label Text="CORTE + LAVADO" TextColor="White" FontSize="16" />
+                        <Label Text="El servicio consta de corte según la preferencia del cliente, con la..." TextColor="#A0AEC0" FontSize="13" Margin="0,5,0,0" LineBreakMode="TailTruncation" MaxLines="2" />
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="1" HorizontalOptions="End" VerticalOptions="Start">
+                        <Label Text="16,00 €" TextColor="White" FontSize="16" FontAttributes="Bold" HorizontalOptions="End" />
+                        <Label Text="40 min" TextColor="#A0AEC0" FontSize="13" HorizontalOptions="End" />
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+            <Border Stroke="#2196F3" StrokeThickness="2" BackgroundColor="Transparent" Padding="15" Margin="0,0,0,15">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12" />
+                </Border.StrokeShape>
+                <Grid ColumnDefinitions="*, Auto">
+                    <VerticalStackLayout Grid.Column="0" Margin="0,0,15,0">
+                        <Label Text="CORTE &amp; ARREGLO DE BARBA" TextColor="White" FontSize="16" />
+                        <Label Text="El servicio mas completo, consta de Corte y arreglo de barba (o..." TextColor="#A0AEC0" FontSize="13" Margin="0,5,0,0" LineBreakMode="TailTruncation" MaxLines="2" />
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="1" HorizontalOptions="End" VerticalOptions="Start">
+                        <Label Text="23,00 €" TextColor="White" FontSize="16" FontAttributes="Bold" HorizontalOptions="End" />
+                        <Label Text="1 h" TextColor="#A0AEC0" FontSize="13" HorizontalOptions="End" />
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+            <Border Stroke="#2196F3" StrokeThickness="2" BackgroundColor="Transparent" Padding="15" Margin="0,0,0,15">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12" />
+                </Border.StrokeShape>
+                <Grid ColumnDefinitions="*, Auto">
+                    <VerticalStackLayout Grid.Column="0" Margin="0,0,15,0">
+                        <Label Text="CORTE NIÑO" TextColor="White" FontSize="16" />
+                        <Label Text="Servicio para los peques, corte a preferencia con peinado (-11 añ..." TextColor="#A0AEC0" FontSize="13" Margin="0,5,0,0" LineBreakMode="TailTruncation" MaxLines="2" />
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="1" HorizontalOptions="End" VerticalOptions="Start">
+                        <Label Text="15,00 €" TextColor="White" FontSize="16" FontAttributes="Bold" HorizontalOptions="End" />
+                        <Label Text="40 min" TextColor="#A0AEC0" FontSize="13" HorizontalOptions="End" />
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
 
             <Label Text="Otros servicios" TextColor="White" FontSize="18" FontAttributes="Bold" Margin="0,15,0,15" />
 
-            <Grid ColumnDefinitions="*, Auto" Padding="0,15,0,15">
-                <VerticalStackLayout Grid.Column="0" Margin="0,0,15,0">
-                    <Label Text="ARREGLO DE BARBA" TextColor="White" FontSize="16" />
-                    <Label Text="El servicio consta de diseño de barba según las preferencias y f..." TextColor="#A0AEC0" FontSize="13" Margin="0,5,0,0" LineBreakMode="TailTruncation" MaxLines="2" />
-                </VerticalStackLayout>
-                <VerticalStackLayout Grid.Column="1" HorizontalOptions="End" VerticalOptions="Start">
-                    <Label Text="10,00 €" TextColor="White" FontSize="16" FontAttributes="Bold" HorizontalOptions="End" />
-                    <Label Text="30 min" TextColor="#A0AEC0" FontSize="13" HorizontalOptions="End" />
-                </VerticalStackLayout>
-            </Grid>
-            <BoxView HeightRequest="1" Color="#1E293B" />
-
-            <Grid ColumnDefinitions="*, Auto" Padding="0,15,0,15">
-                <VerticalStackLayout Grid.Column="0" Margin="0,0,15,0">
-                    <Label Text="DISEÑO / FREESTYLE" TextColor="White" FontSize="16" />
-                    <Label Text="Líneas, dibujos y diseños personalizados en el cabello o cejas." TextColor="#A0AEC0" FontSize="13" Margin="0,5,0,0" LineBreakMode="TailTruncation" MaxLines="2" />
-                </VerticalStackLayout>
-                <VerticalStackLayout Grid.Column="1" HorizontalOptions="End" VerticalOptions="Start">
-                    <Label Text="Desde 5,00 €" TextColor="White" FontSize="16" FontAttributes="Bold" HorizontalOptions="End" />
-                    <Label Text="15 min" TextColor="#A0AEC0" FontSize="13" HorizontalOptions="End" />
-                </VerticalStackLayout>
-            </Grid>
+            <Border Stroke="#2196F3" StrokeThickness="2" BackgroundColor="Transparent" Padding="15" Margin="0,0,0,15">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12" />
+                </Border.StrokeShape>
+                <Grid ColumnDefinitions="*, Auto">
+                    <VerticalStackLayout Grid.Column="0" Margin="0,0,15,0">
+                        <Label Text="ARREGLO DE BARBA" TextColor="White" FontSize="16" />
+                        <Label Text="El servicio consta de diseño de barba según las preferencias y f..." TextColor="#A0AEC0" FontSize="13" Margin="0,5,0,0" LineBreakMode="TailTruncation" MaxLines="2" />
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="1" HorizontalOptions="End" VerticalOptions="Start">
+                        <Label Text="10,00 €" TextColor="White" FontSize="16" FontAttributes="Bold" HorizontalOptions="End" />
+                        <Label Text="30 min" TextColor="#A0AEC0" FontSize="13" HorizontalOptions="End" />
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+            <Border Stroke="#2196F3" StrokeThickness="2" BackgroundColor="Transparent" Padding="15" Margin="0,0,0,15">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12" />
+                </Border.StrokeShape>
+                <Grid ColumnDefinitions="*, Auto">
+                    <VerticalStackLayout Grid.Column="0" Margin="0,0,15,0">
+                        <Label Text="DISEÑO / FREESTYLE" TextColor="White" FontSize="16" />
+                        <Label Text="Líneas, dibujos y diseños personalizados en el cabello o cejas." TextColor="#A0AEC0" FontSize="13" Margin="0,5,0,0" LineBreakMode="TailTruncation" MaxLines="2" />
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="1" HorizontalOptions="End" VerticalOptions="Start">
+                        <Label Text="Desde 5,00 €" TextColor="White" FontSize="16" FontAttributes="Bold" HorizontalOptions="End" />
+                        <Label Text="15 min" TextColor="#A0AEC0" FontSize="13" HorizontalOptions="End" />
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
 
         </VerticalStackLayout>
     </ScrollView>
