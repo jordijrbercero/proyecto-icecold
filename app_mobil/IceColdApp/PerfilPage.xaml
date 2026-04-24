@@ -7,12 +7,14 @@
 
     <VerticalStackLayout Spacing="15" Padding="30" VerticalOptions="Center">
 
+        <!--Contenedor de la imagen de perfil-->
         <ContentView HorizontalOptions="Center"
                      VerticalOptions="Center"
                      Margin="0,0,0,20"
                      HeightRequest="140"
                      WidthRequest="140">
-
+            
+            <!--Botón con imagen de perfil-->
             <ImageButton x:Name="FotoPerfilImagen"
                          Source="ic_usuario.png"
                          Aspect="AspectFill" 
@@ -22,6 +24,7 @@
                          BackgroundColor="Transparent"
                          Clicked="OnCambiarFotoClicked">
 
+                <!--Recorte circular-->
                 <ImageButton.Clip>
                     <EllipseGeometry RadiusX="70" RadiusY="70" Center="70,70" />
                 </ImageButton.Clip>
@@ -29,18 +32,21 @@
             </ImageButton>
         </ContentView>
 
+        <!--Nombre del usuario-->
         <Label x:Name="NombreLabel" 
                FontSize="28" 
                TextColor="White" 
                HorizontalOptions="Center" 
                FontAttributes="Bold" />
 
+        <!--Email del usuario-->
         <Label x:Name="EmailLabel" 
                FontSize="18" 
                TextColor="LightGray" 
                HorizontalOptions="Center" 
                Margin="0,0,0,30"/>
 
+        <!--Botón para cerrar sesión-->
         <Button Text="Cerrar Sesión" 
                 BackgroundColor="#1CD7FF" 
                 TextColor="White" 

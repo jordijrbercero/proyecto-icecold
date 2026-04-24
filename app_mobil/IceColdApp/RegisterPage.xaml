@@ -5,14 +5,22 @@
              Title="Crear Cuenta"
              BackgroundColor="#0B0F19">
 
+    <!--Contenedor principal centrado-->
     <VerticalStackLayout Spacing="20" Padding="30" VerticalOptions="Center">
 
+        <!--Título principal-->
         <Label Text="Únete a la Barbería" FontSize="24" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" />
 
+        <!--Campo nombre-->
         <Entry x:Name="NombreEntry" Placeholder="Tu Nombre" TextColor="White" PlaceholderColor="LightGray"/>
+
+        <!--Campo email-->
         <Entry x:Name="EmailEntry" Placeholder="Correo electrónico" Keyboard="Email" TextColor="White" PlaceholderColor="LightGray"/>
+
+        <!--Campo contraseña-->
         <Entry x:Name="PasswordEntry" Placeholder="Contraseña" IsPassword="True" TextColor="White" PlaceholderColor="LightGray"/>
 
+        <!--Botón de registro-->
         <Button Text="Registrarme" BackgroundColor="#29B6F6" TextColor="White" CornerRadius="20" Clicked="OnGuardarRegistroClicked"/>
 
     </VerticalStackLayout>

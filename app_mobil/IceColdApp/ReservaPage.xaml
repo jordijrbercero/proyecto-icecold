@@ -7,9 +7,13 @@
 
     <Grid RowDefinitions="*, Auto">
 
+        <!--Contenido desplazable-->
         <ScrollView Grid.Row="0">
+
+            <!--Contenedor principal-->
             <VerticalStackLayout Padding="20" Spacing="20">
 
+                <!--Selector de servicio-->
                 <Label Text="Tipo de Servicio" TextColor="White" FontSize="16" FontAttributes="Bold" />
                 <Border BackgroundColor="#1E293B" StrokeThickness="0" Padding="10,0">
                     <Border.StrokeShape>
@@ -22,37 +26,53 @@
                             SelectedIndexChanged="OnServicioChanged" />
                 </Border>
 
+                <!--Selección de barbero-->
                 <Label Text="Barbero" TextColor="White" FontSize="16" FontAttributes="Bold" Margin="0,10,0,0"/>
+
+                <!--Lista horizontal de barberos-->
                 <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
                     <HorizontalStackLayout x:Name="ListaBarberos" Spacing="15">
                         <BindableLayout.ItemTemplate>
                             <DataTemplate>
+
+                                <!--Barbero individual-->
                                 <VerticalStackLayout Spacing="5" HorizontalOptions="Center" WidthRequest="70">
+
+                                    <!--Avatar del barbero-->
                                     <Border HeightRequest="60" WidthRequest="60" StrokeShape="RoundRectangle 30" 
                                             BackgroundColor="{Binding FondoColor}" Stroke="{Binding BordeColor}" StrokeThickness="2">
 
+                                        <!--Recorte circular-->
                                         <Image Source="{Binding Imagen}" Aspect="AspectFill" Margin="2">
                                             <Image.Clip>
                                                 <EllipseGeometry RadiusX="28" RadiusY="28" Center="28,28" />
                                             </Image.Clip>
                                         </Image>
 
+                                        <!--Selección de barbero-->
                                         <Border.GestureRecognizers>
                                             <TapGestureRecognizer Tapped="OnBarberoTapped" />
                                         </Border.GestureRecognizers>
                                     </Border>
+                                    
+                                    <!--Nombre del barbero-->
                                     <Label Text="{Binding Nombre}" TextColor="White" FontSize="12" HorizontalTextAlignment="Center" />
                                 </VerticalStackLayout>
                             </DataTemplate>
                         </BindableLayout.ItemTemplate>
                     </HorizontalStackLayout>
                 </ScrollView>
-
+                
+                <!--Separador-->
                 <BoxView HeightRequest="1" Color="#1E293B" Margin="0,10" />
 
+                <!--Cabecera calendario-->
                 <Grid ColumnDefinitions="*, Auto, Auto" ColumnSpacing="10" VerticalOptions="Center">
+
+                    <!--Mes actual-->
                     <Label x:Name="MesAnioLabel" Grid.Column="0" Text="Mes y Año" TextColor="White" FontSize="18" FontAttributes="Bold" VerticalOptions="Center" />
 
+                    <!--Mes anterior-->
                     <Border Grid.Column="1" HeightRequest="40" WidthRequest="40" StrokeShape="RoundRectangle 8" BackgroundColor="#1E293B" StrokeThickness="0">
                         <Border.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnMesAnteriorTapped" />
@@ -60,6 +80,7 @@
                         <Label Text="&lt;" TextColor="White" FontSize="18" HorizontalOptions="Center" VerticalOptions="Center" />
                     </Border>
 
+                    <!--Mes siguiente-->
                     <Border Grid.Column="2" HeightRequest="40" WidthRequest="40" StrokeShape="RoundRectangle 8" BackgroundColor="#1E293B" StrokeThickness="0">
                         <Border.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnMesSiguienteTapped" />
@@ -68,6 +89,7 @@
                     </Border>
                 </Grid>
 
+                <!--Días de la semana-->
                 <Grid ColumnDefinitions="*,*,*,*,*,*,*" Margin="0,10,0,0">
                     <Label Grid.Column="0" Text="Lun" TextColor="#A0AEC0" FontSize="12" HorizontalTextAlignment="Center" />
                     <Label Grid.Column="1" Text="Mar" TextColor="#A0AEC0" FontSize="12" HorizontalTextAlignment="Center" />
@@ -78,19 +100,27 @@
                     <Label Grid.Column="6" Text="Dom" TextColor="#A0AEC0" FontSize="12" HorizontalTextAlignment="Center" />
                 </Grid>
 
+                <!--Calendario de días-->
                 <FlexLayout x:Name="ContenedorDias" Wrap="Wrap" Direction="Row" JustifyContent="Start">
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
+
+                            <!--Día individual-->
                             <ContentView FlexLayout.Basis="14.28%">
                                 <VerticalStackLayout HeightRequest="60" Spacing="2" HorizontalOptions="Center" Margin="0,5">
+                                    
+                                    <!--Número del día-->
                                     <Border HeightRequest="40" WidthRequest="40" StrokeShape="RoundRectangle 20" 
                                             BackgroundColor="{Binding FondoColor}" Stroke="{Binding BordeColor}" StrokeThickness="2" HorizontalOptions="Center">
                                         <Label Text="{Binding Numero}" TextColor="{Binding TextoColor}" FontSize="16" HorizontalOptions="Center" VerticalOptions="Center" />
 
+                                        <!--Selección de día-->
                                         <Border.GestureRecognizers>
                                             <TapGestureRecognizer Tapped="OnDiaTapped" />
                                         </Border.GestureRecognizers>
                                     </Border>
+                                    
+                                    <!--Indicador de disponibilidad-->
                                     <BoxView HeightRequest="4" WidthRequest="12" CornerRadius="2" Color="{Binding PuntoColor}" HorizontalOptions="Center" />
                                 </VerticalStackLayout>
                             </ContentView>
@@ -98,25 +128,32 @@
                     </BindableLayout.ItemTemplate>
                 </FlexLayout>
 
+                <!--Separador-->
                 <BoxView HeightRequest="1" Color="#1E293B" Margin="0,10" />
 
+                <!--Título horas-->
                 <Label Text="Horas disponibles" TextColor="White" FontSize="16" FontAttributes="Bold" />
 
+                <!--Mensaje si no hay horas-->
                 <Label Text="No hay horas disponibles para este día/barbero." 
                        TextColor="#EF4444" 
                        FontSize="13" 
                        IsVisible="{Binding Count, Source={x:Reference ListaHoras}, Converter={x:StaticResource InvertedBoolConverter}, FallbackValue=False}" />
 
+                <!--Lista de horas-->
                 <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
                     <HorizontalStackLayout x:Name="ListaHoras" Spacing="10">
                         <BindableLayout.ItemTemplate>
                             <DataTemplate>
+
+                                <!--Hora individual-->
                                 <Border BackgroundColor="{Binding FondoColor}" Stroke="{Binding BordeColor}" StrokeThickness="2" Padding="15,10" Margin="0,0,5,0">
                                     <Border.StrokeShape>
                                         <RoundRectangle CornerRadius="8" />
                                     </Border.StrokeShape>
                                     <Label Text="{Binding Hora}" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" />
 
+                                    <!--Selección de hora-->
                                     <Border.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="OnHoraTapped" />
                                     </Border.GestureRecognizers>
@@ -126,26 +163,32 @@
                     </HorizontalStackLayout>
                 </ScrollView>
 
+                <!--Espaciador final-->
                 <BoxView HeightRequest="30" Color="Transparent" />
             </VerticalStackLayout>
         </ScrollView>
 
+        <!--Barra inferior resumen-->
         <Border Grid.Row="1" BackgroundColor="#1E293B" StrokeThickness="0" Padding="20">
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="20,20,0,0" />
             </Border.StrokeShape>
 
             <VerticalStackLayout Spacing="10">
+                
+                <!--Resumen servicio y precio-->
                 <Grid ColumnDefinitions="*, Auto">
                     <VerticalStackLayout Grid.Column="0" VerticalOptions="Center">
                         <Label x:Name="ResumenServicio" Text="Selecciona servicio" TextColor="#A0AEC0" FontSize="13" />
                         <Label x:Name="ResumenPrecio" Text="0,00 €" TextColor="White" FontSize="22" FontAttributes="Bold" />
                     </VerticalStackLayout>
 
+                    <!--Botón continuar-->
                     <Button Grid.Column="1" Text="Continuar" BackgroundColor="#29B6F6" TextColor="White" 
                             FontAttributes="Bold" CornerRadius="8" WidthRequest="140" HeightRequest="45" Clicked="OnContinuarClicked" />
                 </Grid>
 
+                <!--Aviso legal-->
                 <Label Text="Tus datos personales serán procesados para gestionar tu cita." 
                        TextColor="#A0AEC0" FontSize="11" HorizontalTextAlignment="Center" Margin="0,10,0,0" />
             </VerticalStackLayout>

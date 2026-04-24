@@ -7,46 +7,58 @@
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="20">
-
+            
+            <!--Logo de la barbería-->
             <Image Source="logo_barberia.png" 
                    HeightRequest="150" 
                    HorizontalOptions="Center" 
                    Margin="0,10,0,10" />
-
+            
+            <!--Título sección-->
             <Label Text="Sobre Nosotros" 
                    TextColor="White" 
                    FontSize="28" 
                    FontAttributes="Bold" 
                    HorizontalOptions="Center" />
 
+            <!--Descripción de la barbería-->
             <Label Text="En Ice Cold Barbershop no solo cortamos cabello, creamos tu mejor versión. Con años de experiencia y pasión por el detalle, ofrecemos un ambiente único donde la tradición clásica choca con las tendencias modernas. Relájate, disfruta del ambiente y déjate cuidar por profesionales."
                    TextColor="#A0AEC0" 
                    FontSize="16" 
                    HorizontalTextAlignment="Center" 
                    LineHeight="1.5" />
 
+            <!--Línea separadora-->
             <BoxView HeightRequest="1" Color="#1E293B" Margin="0,15" />
 
+            <!--Título sección horario-->
             <Label Text="Nuestro Horario" 
                    TextColor="White" 
                    FontSize="22" 
                    FontAttributes="Bold" 
                    Margin="0,0,0,10"/>
 
+            <!--Contenedor del horario con estilo tipo tarjeta-->
             <Border BackgroundColor="#1E293B" StrokeThickness="0" Padding="15">
                 <Border.StrokeShape>
+                    <!--Bordes redondeados-->
                     <RoundRectangle CornerRadius="12" />
                 </Border.StrokeShape>
 
+                <!--Grid para organizar días y horas-->
                 <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto, Auto, Auto" RowSpacing="15">
 
+                    <!--Lunes a Viernes-->
                     <Label Grid.Row="0" Grid.Column="0" Text="Lunes - Viernes" TextColor="#A0AEC0" FontSize="16" VerticalOptions="Center" />
                     <Label Grid.Row="0" Grid.Column="1" Text="10:00 - 20:00" TextColor="White" FontSize="16" FontAttributes="Bold" />
 
+                    <!--Sábados-->
                     <Label Grid.Row="1" Grid.Column="0" Text="Sábados" TextColor="#A0AEC0" FontSize="16" VerticalOptions="Center" />
                     <Label Grid.Row="1" Grid.Column="1" Text="09:00 - 14:00" TextColor="White" FontSize="16" FontAttributes="Bold" />
-
+                    
+                    <!--Domingos-->
                     <Label Grid.Row="2" Grid.Column="0" Text="Domingos" TextColor="#A0AEC0" FontSize="16" VerticalOptions="Center" />
+                    <!--Color rojo para indicar cerrado-->
                     <Label Grid.Row="2" Grid.Column="1" Text="Cerrado" TextColor="#EF4444" FontSize="16" FontAttributes="Bold" />
 
                 </Grid>

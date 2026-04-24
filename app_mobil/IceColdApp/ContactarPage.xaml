@@ -8,6 +8,7 @@
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
 
+            <!--Título principal-->
             <Label Text="Ponte en Contacto" 
                    TextColor="White" 
                    FontSize="28" 
@@ -15,13 +16,20 @@
                    HorizontalOptions="Center" 
                    Margin="0,10,0,20" />
 
+            <!--Tarjeta de teléfono-->
             <Border BackgroundColor="#1E293B" Stroke="#2196F3" StrokeThickness="2" Padding="15">
+
+                <!--Acción al pulsar (llamar o WhatsApp)-->
                 <Border.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnTelefonoTapped" />
                 </Border.GestureRecognizers>
+
+                <!--Bordes redondeados-->
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="12" />
                 </Border.StrokeShape>
+
+                <!--Contenido-->
                 <Grid ColumnDefinitions="Auto, *">
                     <Label Grid.Column="0" Text="📞" FontSize="26" VerticalOptions="Center" Margin="0,0,15,0" />
                     <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
@@ -31,10 +39,15 @@
                 </Grid>
             </Border>
 
+            <!--Tarjeta de ubicación-->
             <Border BackgroundColor="#1E293B" Stroke="#2196F3" StrokeThickness="2" Padding="15">
+
+                <!--Bordes redondeados-->
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="12" />
                 </Border.StrokeShape>
+
+                <!--Contenido-->
                 <Grid ColumnDefinitions="Auto, *">
                     <Label Grid.Column="0" Text="📍" FontSize="26" VerticalOptions="Center" Margin="0,0,15,0" />
                     <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
@@ -44,13 +57,20 @@
                 </Grid>
             </Border>
 
+            <!--Tarjeta de Instagram-->
             <Border BackgroundColor="#1E293B" Stroke="#2196F3" StrokeThickness="2" Padding="15">
+
+                <!--Acción al pulsar (abrir Instagram)-->
                 <Border.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnInstagramTapped" />
                 </Border.GestureRecognizers>
+
+                <!--Bordes redondeados-->
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="12" />
                 </Border.StrokeShape>
+
+                <!--Contenido-->
                 <Grid ColumnDefinitions="Auto, *">
                     <Label Grid.Column="0" Text="📱" FontSize="26" VerticalOptions="Center" Margin="0,0,15,0" />
                     <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
@@ -60,13 +80,20 @@
                 </Grid>
             </Border>
 
+            <!--Tarjeta de correo-->
             <Border BackgroundColor="#1E293B" Stroke="#2196F3" StrokeThickness="2" Padding="15">
+
+                <!--Acción al pulsar (enviar email)-->
                 <Border.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnCorreoTapped" />
                 </Border.GestureRecognizers>
+
+                <!--Bordes redondeados-->
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="12" />
                 </Border.StrokeShape>
+
+                <!--Contenido-->
                 <Grid ColumnDefinitions="Auto, *">
                     <Label Grid.Column="0" Text="✉️" FontSize="26" VerticalOptions="Center" Margin="0,0,15,0" />
                     <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">

@@ -7,6 +7,7 @@
 
     <Grid Padding="20">
 
+        <!--Mensaje cuando no hay reservas-->
         <Label x:Name="MensajeVacio" 
                Text="No tienes ninguna reserva activa." 
                TextColor="#A0AEC0" 
@@ -18,32 +19,45 @@
         <CollectionView x:Name="ListaMisReservas">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
+                    <!--Tarjeta de reserva-->
                     <Border BackgroundColor="#1E293B" StrokeThickness="0" Padding="15" Margin="0,0,0,15">
+                        
+                        <!--Bordes redondeados-->
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="12" />
                         </Border.StrokeShape>
+                        
+                        <!--Contenido de la tarjeta-->
                         <VerticalStackLayout Spacing="10">
 
+                            <!--Servicio, barbero y precio-->
                             <Grid ColumnDefinitions="*, Auto">
                                 <VerticalStackLayout Grid.Column="0">
+                                    <!--Nombre del servicio-->
                                     <Label Text="{Binding Servicio}" TextColor="White" FontSize="18" FontAttributes="Bold" />
+                                    <!--Nombre del barbero-->
                                     <Label Text="{Binding Barbero, StringFormat='Con {0}'}" TextColor="#29B6F6" FontSize="14" />
                                 </VerticalStackLayout>
+                                <!--Precio-->
                                 <Label Grid.Column="1" Text="{Binding Precio}" TextColor="White" FontSize="18" FontAttributes="Bold" VerticalOptions="Start" />
                             </Grid>
 
+                            <!--Separador-->
                             <BoxView HeightRequest="1" Color="#0A0F1D" Margin="0,5" />
 
+                            <!--Fecha y hora-->
                             <Grid ColumnDefinitions="*, *">
                                 <Label Grid.Column="0" Text="{Binding Dia, StringFormat='📅 {0}'}" TextColor="#A0AEC0" FontSize="14" />
                                 <Label Grid.Column="1" Text="{Binding Hora, StringFormat='⏰ {0}'}" TextColor="#A0AEC0" FontSize="14" HorizontalOptions="End" />
                             </Grid>
 
+                            <!--Botones de acción-->
                             <Grid ColumnDefinitions="*, *" ColumnSpacing="10" Margin="0,10,0,0">
+                                <!--Botón ver detalles-->
                                 <Button Grid.Column="0" Text="Ver Detalles" BackgroundColor="Transparent" TextColor="#29B6F6" 
                                         BorderColor="#29B6F6" BorderWidth="1" CornerRadius="8" HeightRequest="40"
                                         Clicked="OnVerClicked" CommandParameter="{Binding .}" />
-
+                                <!--Botón cancelar reserva-->
                                 <Button Grid.Column="1" Text="Cancelar" BackgroundColor="#EF4444" TextColor="White" 
                                         CornerRadius="8" HeightRequest="40"
                                         Clicked="OnCancelarClicked" CommandParameter="{Binding .}" />

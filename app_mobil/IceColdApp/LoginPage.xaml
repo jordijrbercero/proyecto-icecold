@@ -6,29 +6,34 @@
              BackgroundColor="#0B0F19">
     <VerticalStackLayout Spacing="20" Padding="30" VerticalOptions="Center">
 
+        <!--Título de bienvenida-->
         <Label Text="Bienvenido a Ice Cold" 
                FontSize="24" 
                TextColor="White"
                HorizontalOptions="Center" 
                FontAttributes="Bold" />
 
+        <!--Campo de correo-->
         <Entry x:Name="EmailEntry"
            Placeholder="Correo electrónico" 
            Keyboard="Email" 
            TextColor="White"
            PlaceholderColor="LightGray"/>
 
+        <!--Campo de contraseña-->
         <Entry x:Name="PasswordEntry"
            Placeholder="Contraseña" 
            IsPassword="True" 
            TextColor="White"
            PlaceholderColor="LightGray"/>
 
+        <!--Botón para iniciar sesión-->
         <Button Text="Entrar" 
                 BackgroundColor="#29B6F6" TextColor="White"
                 CornerRadius="20"
                 Clicked="OnLoginClicked"/>
 
+        <!--Botón para ir al registro-->
         <Button Text="Crear cuenta nueva" 
                 BackgroundColor="Transparent" 
                 TextColor="#29B6F6"

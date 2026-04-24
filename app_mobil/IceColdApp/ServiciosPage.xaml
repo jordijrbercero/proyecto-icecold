@@ -8,23 +8,35 @@
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="0">
 
+            <!--Título servicios populares-->
             <Label Text="Servicios más populares" TextColor="White" FontSize="18" FontAttributes="Bold" Margin="0,0,0,15" />
 
+            <!--Servicio 1-->
             <Border Stroke="#2196F3" StrokeThickness="2" BackgroundColor="Transparent" Padding="15" Margin="0,0,0,15">
+                
+                <!--Bordes redondeados-->
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="12" />
                 </Border.StrokeShape>
+
+                <!--Contenido servicio-->
                 <Grid ColumnDefinitions="*, Auto">
+
+                    <!--Descripción-->
                     <VerticalStackLayout Grid.Column="0" Margin="0,0,15,0">
                         <Label Text="CORTE + LAVADO" TextColor="White" FontSize="16" />
                         <Label Text="El servicio consta de corte según la preferencia del cliente, con la..." TextColor="#A0AEC0" FontSize="13" Margin="0,5,0,0" LineBreakMode="TailTruncation" MaxLines="2" />
                     </VerticalStackLayout>
+
+                    <!--Precio y duración-->
                     <VerticalStackLayout Grid.Column="1" HorizontalOptions="End" VerticalOptions="Start">
                         <Label Text="16,00 €" TextColor="White" FontSize="16" FontAttributes="Bold" HorizontalOptions="End" />
                         <Label Text="40 min" TextColor="#A0AEC0" FontSize="13" HorizontalOptions="End" />
                     </VerticalStackLayout>
                 </Grid>
             </Border>
+
+            <!--Servicio 2-->
             <Border Stroke="#2196F3" StrokeThickness="2" BackgroundColor="Transparent" Padding="15" Margin="0,0,0,15">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="12" />
@@ -40,6 +52,8 @@
                     </VerticalStackLayout>
                 </Grid>
             </Border>
+
+            <!--Servicio 3-->
             <Border Stroke="#2196F3" StrokeThickness="2" BackgroundColor="Transparent" Padding="15" Margin="0,0,0,15">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="12" />
@@ -56,8 +70,10 @@
                 </Grid>
             </Border>
 
+            <!--Título otros servicios-->
             <Label Text="Otros servicios" TextColor="White" FontSize="18" FontAttributes="Bold" Margin="0,15,0,15" />
 
+            <!--Servicio 4-->
             <Border Stroke="#2196F3" StrokeThickness="2" BackgroundColor="Transparent" Padding="15" Margin="0,0,0,15">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="12" />
@@ -73,6 +89,8 @@
                     </VerticalStackLayout>
                 </Grid>
             </Border>
+
+            <!--Servicio 5-->
             <Border Stroke="#2196F3" StrokeThickness="2" BackgroundColor="Transparent" Padding="15" Margin="0,0,0,15">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="12" />
